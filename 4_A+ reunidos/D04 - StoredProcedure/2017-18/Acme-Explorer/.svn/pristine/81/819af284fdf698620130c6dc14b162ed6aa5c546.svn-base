@@ -1,0 +1,141 @@
+package services;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import domain.Admin;
+import domain.LegalText;
+import domain.Trip;
+
+import utilities.AbstractTest;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:spring/datasource.xml","classpath:spring/config/packages.xml"})
+
+@Transactional 
+public class LegalTextServiceTest extends AbstractTest{
+	
+	// Service under test ---------------------------------------
+	
+	@Autowired
+	private LegalTextService legalTextService;
+	
+	@Autowired
+	private  AdminService adminService;
+	
+	@Autowired
+	private TripService tripService;
+	
+	
+	
+	// Tests -----------------------------------------------------
+	
+	@Test 
+	public void testCreate(){
+		
+		LegalText legalText;
+		
+		super.authenticate("admin1");
+		//Admin a= this.adminService.findByPrincipal();
+		legalText=legalTextService.create();
+		Assert.notNull(legalText.getMoment());
+		Assert.notNull(legalText);
+		super.unauthenticate();
+	}
+	
+	@Test
+	public void testSave(){
+		
+		LegalText legalText,saved;
+		Collection<Trip> trips;
+		super.authenticate("admin1");
+		//Admin a = adminService.findByPrincipal();
+		legalText = this.legalTextService.create();
+		legalText.setBody("LegalText Body");
+		legalText.setDraft(false);
+		Collection<String> laws= new ArrayList<String>();
+		laws.add("law230");
+		legalText.setLaws(laws);
+		legalText.setTitle("title 1");
+		trips = tripService.findAll();
+		legalText.setTrips(trips);
+		saved= legalTextService.save(legalText);
+		Collection<LegalText> legalTexts=legalTextService.findAll();
+		Assert.isTrue(legalTexts.contains(saved));
+		super.unauthenticate();
+	}
+	
+	@Test
+	public void testDelete(){
+		Collection<Trip> trips;
+		LegalText legalText,saved;
+		
+		super.authenticate("admin1");
+		//Admin a = adminService.findByPrincipal();
+		legalText=legalTextService.create();
+		legalText.setBody("LegalText Body");
+		legalText.setDraft(true);
+		Collection<String> laws= new ArrayList<String>();
+		laws.add("law230");
+		legalText.setLaws(laws);
+		legalText.setTitle("title 1");
+		//legalText=legalTextService.findOne(7075);
+		trips = tripService.findAll();
+		legalText.setTrips(trips);
+		saved= legalTextService.save(legalText);
+		this.legalTextService.delete(saved);
+		Collection<LegalText> legalTexts=legalTextService.findAll();
+		Assert.isTrue(!legalTexts.contains(saved));
+		super.unauthenticate();
+		
+	}
+	
+	@Test
+	public void testFindOneToEdit(){
+		
+		LegalText legalText,saved,legalTextRetrieved;
+		Collection<Trip> trips;
+		
+		authenticate("admin1");
+		
+		//Admin a= adminService.findByPrincipal();
+		legalText=legalTextService.create();
+		legalText.setBody("LegalText Body");
+		legalText.setDraft(true);
+		Collection<String> laws= new ArrayList<String>();
+		laws.add("law230");
+		legalText.setLaws(laws);
+		legalText.setTitle("title 1");
+		trips = tripService.findAll();
+		legalText.setTrips(trips);
+		saved= legalTextService.save(legalText);
+		legalTextRetrieved = legalTextService.findOneToEdit(saved.getId());
+		Assert.isTrue(saved==legalTextRetrieved);
+		super.unauthenticate();
+	}
+	
+	@Test
+	public void testassignLegalTextToTrip(){
+		LegalText legalText,saved;
+		//Collection<Trip> trips = null;
+		Trip trip;
+		authenticate("manager1");
+		
+		trip = tripService.findOne(7151);
+		legalText = legalTextService.findOne(7075);
+		saved=legalTextService.assignLegalTextToTrip(trip, legalText);
+		Assert.isTrue(legalText.getTrips().contains(trip));
+		Assert.isTrue(trip.getLegalText().equals(saved));
+		super.unauthenticate();
+		
+	}
+	
+}

@@ -1,0 +1,70 @@
+
+package services;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import repositories.ProfessionalRecordRepository;
+import domain.Curriculum;
+import domain.ProfessionalRecord;
+
+@Service
+@Transactional
+public class ProfessionalRecordService {
+
+	// Manager Repository -----------------------------------------------
+
+	@Autowired
+	private ProfessionalRecordRepository	professionalRecordRepository;
+
+	// Supported Service ------------------------------------------------
+
+	@Autowired
+	private CurriculumService				curriculumService;
+
+
+	// Simple CRUD methods ----------------------------------------------------
+
+	public ProfessionalRecord create() {
+		ProfessionalRecord professionalRecord;
+
+		professionalRecord = new ProfessionalRecord();
+		professionalRecord.setComments(new ArrayList<String>());
+
+		return professionalRecord;
+	}
+
+	public ProfessionalRecord save(final ProfessionalRecord professionalRecord, final Curriculum curriculum) {
+		Assert.notNull(professionalRecord);
+		Assert.notNull(curriculum);
+
+		curriculum.getProfessionalRecords().add(professionalRecord);
+		this.curriculumService.save(curriculum);
+
+		return this.professionalRecordRepository.save(professionalRecord);
+	}
+
+	public void delete(final ProfessionalRecord professionalRecord, final Curriculum curriculum) {
+		Assert.notNull(professionalRecord);
+		Assert.notNull(professionalRecord);
+		Assert.notNull(curriculum);
+
+		curriculum.getProfessionalRecords().remove(professionalRecord);
+		this.curriculumService.save(curriculum);
+		this.professionalRecordRepository.delete(professionalRecord);
+	}
+
+	public ProfessionalRecord findOne(final int id) {
+		return this.professionalRecordRepository.findOne(id);
+	}
+
+	public Collection<ProfessionalRecord> findAll() {
+		return this.professionalRecordRepository.findAll();
+	}
+
+}

@@ -1,0 +1,23 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+learningMaterial.title					= Título
+learningMaterial.abstractText			= Abstracto
+learningMaterial.attachments			= Accesorios
+learningMaterial.body					= Cuerpo
+learningMaterial.path					= Camino
+learningMaterial.identifier				= Identificador
+
+
+learningMaterial.create					= Crear
+learningMaterial.showLearningMaterial	= Ver material didáctico
+learningMaterial.commit.error			= No se puede completar su operación
+text.commit.error						= No se puede completar su operación
+presentation.commit.error				= No se puede completar su operación
+video.commit.error						= No se puede completar su operación
+

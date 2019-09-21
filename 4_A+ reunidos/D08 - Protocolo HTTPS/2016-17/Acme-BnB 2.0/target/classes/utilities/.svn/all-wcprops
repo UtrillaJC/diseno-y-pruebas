@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/138/Acme-BnB/src/main/java/utilities
+END
+DatabaseConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/2/Acme-BnB/src/main/java/utilities/DatabaseConfig.java
+END
+HashPassword.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/2/Acme-BnB/src/main/java/utilities/HashPassword.java
+END
+PopulateDatabase.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/2/Acme-BnB/src/main/java/utilities/PopulateDatabase.java
+END
+QueryDatabase.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/2/Acme-BnB/src/main/java/utilities/QueryDatabase.java
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/166/Acme-BnB/src/main/webapp/WEB-INF/tags
+END
+displayColumn.tag
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/157/Acme-BnB/src/main/webapp/WEB-INF/tags/displayColumn.tag
+END
+submit.tag
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/157/Acme-BnB/src/main/webapp/WEB-INF/tags/submit.tag
+END
+cancel.tag
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/160/Acme-BnB/src/main/webapp/WEB-INF/tags/cancel.tag
+END
+textarea.tag
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/138/Acme-BnB/src/main/webapp/WEB-INF/tags/textarea.tag
+END
+messageDeleteByIdMD.tag
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/157/Acme-BnB/src/main/webapp/WEB-INF/tags/messageDeleteByIdMD.tag
+END
+password.tag
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/2/Acme-BnB/src/main/webapp/WEB-INF/tags/password.tag
+END
+select.tag
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/2/Acme-BnB/src/main/webapp/WEB-INF/tags/select.tag
+END
+manageButtons.tag
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/166/Acme-BnB/src/main/webapp/WEB-INF/tags/manageButtons.tag
+END
+textbox.tag
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/138/Acme-BnB/src/main/webapp/WEB-INF/tags/textbox.tag
+END
+contains.tag
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/138/Acme-BnB/src/main/webapp/WEB-INF/tags/contains.tag
+END
+button.tag
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/157/Acme-BnB/src/main/webapp/WEB-INF/tags/button.tag
+END

@@ -1,0 +1,97 @@
+10
+
+dir
+181
+https://repositorio.informatica.us.es/svn/w9qlhnpm327hqfyaqx9/Acme-BnB/src/main/webapp/views
+https://repositorio.informatica.us.es/svn/w9qlhnpm327hqfyaqx9
+
+
+
+2017-03-07T12:58:50.748739Z
+180
+jorcabcru
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+59d45695-54d9-4edc-82c5-29a5910474a2
+
+actor
+dir
+
+administrator
+dir
+
+attribute
+dir
+
+audit
+dir
+
+auditor
+dir
+
+comment
+dir
+
+configuration
+dir
+
+customer
+dir
+
+dashboard
+dir
+
+finder
+dir
+
+invoice
+dir
+
+lessor
+dir
+
+master-page
+dir
+
+misc
+dir
+
+profile
+dir
+
+property
+dir
+
+register
+dir
+
+request
+dir
+
+security
+dir
+
+socialidentity
+dir
+
+tenant
+dir
+
+valueAttribute
+dir
+
+welcome
+dir
+

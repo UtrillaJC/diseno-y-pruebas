@@ -1,0 +1,159 @@
+
+package services;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import utilities.AbstractTest;
+import domain.Actor;
+import domain.Folder;
+import domain.Manager;
+import domain.Message;
+import domain.Priority;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {
+	"classpath:spring/datasource.xml", "classpath:spring/config/packages.xml"
+})
+@Transactional
+public class MessageServiceTest extends AbstractTest {
+
+	// Service under test ---------------------------------
+
+	@Autowired
+	private MessageService	messageService;
+
+	@Autowired
+	private ActorService	actorService;
+
+	@Autowired
+	private ManagerService	managerService;
+
+
+	// Tests ----------------------------------------------
+
+	@Test
+	public void testCreate() {
+		final Message message;
+		final Actor sender;
+
+		super.authenticate("manager1");
+
+		sender = this.actorService.findByPrincipal();
+		message = this.messageService.create(sender);
+		Assert.isTrue(message.getSender().equals(sender));
+
+		final List<Folder> folders_sender = new ArrayList<Folder>(sender.getFolders());
+		Assert.isTrue(message.getFolder().equals(folders_sender.get(1)));
+
+		super.unauthenticate();
+	}
+
+	@Test
+	public void testSave() {
+		Actor sender, reciever;
+		Message message, saved;
+
+		super.authenticate("manager1");
+		sender = this.actorService.findByPrincipal();
+		reciever = this.actorService.findOne(7149);
+		message = this.messageService.create(sender);
+		message.setSubject("Trip information");
+		message.setBody("This is the body of the message to explorer1 from manager1.");
+		final Collection<Actor> recipients = new ArrayList<>();
+		message.setRecipients(recipients);
+		message.setPriority(Priority.HIGH);
+		saved = this.messageService.save(message);
+
+		Assert.isTrue(this.messageService.findOne(saved.getId()).getSender().equals(sender));
+		//final Collection<Message> all_messages = this.messageService.findAll();
+		//Assert.isTrue(all_messages.contains(saved));
+
+	}
+
+	@Test
+	public void testSend_Message() {
+		Actor sender, reciever;
+		Message messageToSend, sentMessage;
+
+		super.authenticate("admin1");
+		sender = this.actorService.findByPrincipal();
+		reciever = this.actorService.findByUserAccountId(7016);
+		messageToSend = this.messageService.create(sender);
+		messageToSend.setSubject("Trip information");
+		messageToSend.setBody("This is the body of the message to explorer1 from manager1.");
+		final Collection<Actor> recipients = new ArrayList<>();
+		recipients.add(reciever);
+		messageToSend.setRecipients(recipients);
+		messageToSend.setPriority(Priority.HIGH);
+		sentMessage = this.messageService.sendMessage(messageToSend);
+
+		final List<Folder> folders_sender = new ArrayList<Folder>(sender.getFolders());
+		Assert.isTrue(sender.getSentMessages().contains(sentMessage));
+		Assert.isTrue(!folders_sender.isEmpty());
+		final List<Folder> folders_reciever = new ArrayList<Folder>(reciever.getFolders());
+
+		Assert.isTrue(!folders_reciever.get(0).getMessages().isEmpty());
+
+		super.unauthenticate();
+	}
+	@Test
+	public void testSend_Spam_Message() {
+		Actor sender, reciever;
+		Message messageToSend, sentMessage;
+		Folder spamBox;
+
+		super.authenticate("manager1");
+		sender = this.actorService.findByPrincipal();
+		reciever = this.actorService.findOne(7150);
+		messageToSend = this.messageService.create(sender);
+		messageToSend.setSubject("Trip information ");
+		messageToSend.setBody("This is the body of the SeX message to explorer1 from manager1.");
+		final Collection<Actor> recipients = new ArrayList<>();
+		recipients.add(reciever);
+		messageToSend.setRecipients(recipients);
+		messageToSend.setPriority(Priority.HIGH);
+		sentMessage = this.messageService.sendMessage(messageToSend);
+		final List<Folder> folders_reciever = new ArrayList<Folder>(reciever.getFolders());
+		spamBox = folders_reciever.get(4);
+
+		Assert.isTrue(sender.getDeactivated());
+		Assert.isTrue(!spamBox.getMessages().isEmpty());
+		final Manager manager = this.managerService.findByUserAccountId(sender.getUserAccount().getId());
+		Assert.isTrue(manager.getSuspicious());
+
+	}
+
+	@Test
+	public void test_Send_Notification() {
+		Actor sender, reciever;
+		Message messageToSend, sentMessage;
+		Folder notificationBox;
+
+		super.authenticate("admin1");
+		sender = this.actorService.findByPrincipal();
+		reciever = this.actorService.findByUserAccountId(7020);
+		messageToSend = this.messageService.create(sender);
+		messageToSend.setSubject("Notification to manager1 ");
+		messageToSend.setBody("This is the body of the notification message to manager1 from admin1.");
+		final Collection<Actor> recipients = new ArrayList<>();
+		recipients.add(reciever);
+		messageToSend.setRecipients(recipients);
+		messageToSend.setPriority(Priority.HIGH);
+		sentMessage = this.messageService.notifyMessage(messageToSend);
+		final List<Folder> folders_reciever = new ArrayList<Folder>(reciever.getFolders());
+		notificationBox = folders_reciever.get(2);
+
+		Assert.isTrue(notificationBox.getMessages().contains(sentMessage));
+
+	}
+}

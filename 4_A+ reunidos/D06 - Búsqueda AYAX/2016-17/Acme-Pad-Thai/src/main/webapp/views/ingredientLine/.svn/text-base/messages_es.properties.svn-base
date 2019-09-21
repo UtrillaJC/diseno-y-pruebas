@@ -1,0 +1,17 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+
+ingredientLine.multiplicity		= Cantidad
+ingredientLine.unit				= Unidad
+ingredientLine.ingredient		= Ingrediente
+
+ingredientLine.add				= Añadir
+ingredientLine.cancel			= Cancelar
+
+ingredientLine.commit.error		= La acción no se puede completar, su receta puede que esté registrada en un concurso

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/133/Acme-Pad-Thai/src/main/java/controllers/user
+END
+ProfileUserController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/94/Acme-Pad-Thai/src/main/java/controllers/user/ProfileUserController.java
+END
+RegistrationUserController.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/40/Acme-Pad-Thai/src/main/java/controllers/user/RegistrationUserController.java
+END
+MasterClassUserController.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/82/Acme-Pad-Thai/src/main/java/controllers/user/MasterClassUserController.java
+END
+LearningMaterialUserController.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/71/Acme-Pad-Thai/src/main/java/controllers/user/LearningMaterialUserController.java
+END
+IngredientLineUserController.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/125/Acme-Pad-Thai/src/main/java/controllers/user/IngredientLineUserController.java
+END
+ContestUserController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/40/Acme-Pad-Thai/src/main/java/controllers/user/ContestUserController.java
+END
+RegisterUserController.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/82/Acme-Pad-Thai/src/main/java/controllers/user/RegisterUserController.java
+END
+RecipeUserController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/133/Acme-Pad-Thai/src/main/java/controllers/user/RecipeUserController.java
+END
+SocialIdentityUserController.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/107/Acme-Pad-Thai/src/main/java/controllers/user/SocialIdentityUserController.java
+END

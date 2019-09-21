@@ -1,0 +1,56 @@
+# messages.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+lessor.name			= Name
+lessor.surname		= Surname
+lessor.email		= Email
+lessor.phone		= Phone
+lessor.address		= Address
+lessor.amount		= Total fee amount to pay
+
+lessor.comments = Comments
+
+register.creditCard						= Credit card
+register.creditCard.brandName			= Brand name
+register.creditCard.holderName			= Holder name
+register.creditCard.number				= Number
+register.creditCard.expirationMonth		= Expiration month
+register.creditCard.expirationYear		= Expiration year
+register.creditCard.cvvCode				= Code CVV
+		
+lessor.save				= Save
+lessor.edit				= Edit
+lessor.create			= Create
+lessor.delete			= Delete
+lessor.cancel			= Cancel
+lessor.back				= Back
+
+edit.cancel							= Cancel
+edit.save 							= Save
+edit.commit.error					= Oops! something was wrong,contact with your administrator
+edit.name							= Name
+edit.surname						= Surnames					
+edit.email							= Email
+edit.phone							= Phone
+edit.picture						= Picture
+
+property.confirm.delete		= Are you sure about deleting this lessor?
+
+property.commit.error		=  Error during commit
+
+comment.author = Author
+comment.moment = Moment
+comment.title = Title
+comment.text = Text
+comment.stars = Stars
+comment.return.link = Back
+
+lessor.socialIdentities = Social identities
+socialIdentity.nick = Nick
+socialIdentity.socialNetwork = Social network
+socialIdentity.profile = Profile

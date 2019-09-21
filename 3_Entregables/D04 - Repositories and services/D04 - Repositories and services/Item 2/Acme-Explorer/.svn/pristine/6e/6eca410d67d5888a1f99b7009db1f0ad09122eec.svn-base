@@ -1,0 +1,121 @@
+
+package services;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+
+import javax.transaction.Transactional;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.Assert;
+
+import utilities.AbstractTest;
+import domain.Trip;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {
+	"classpath:spring/datasource.xml", "classpath:spring/config/packages.xml"
+})
+@Transactional
+public class TripServiceTest extends AbstractTest {
+
+	@Autowired
+	private TripService			tripService;
+
+	@Autowired
+	private CategoryService		categoryService;
+
+	@Autowired
+	private LegalTextService	legalTextService;
+
+	@Autowired
+	private ManagerService		mangerService;
+
+	@Autowired
+	private RangerService		rangerService;
+
+	@Autowired
+	private StageService		stageService;
+
+
+	@Test
+	public void testCreate() {
+
+		super.authenticate("manager1");
+
+		Trip trip = null;
+
+		trip = this.tripService.create();
+
+		Assert.notNull(trip.getTicker());
+		Assert.isNull(trip.getTitle());
+		Assert.isNull(trip.getDescription());
+		Assert.notNull(trip.getRequirements());
+		Assert.isNull(trip.getPublicationDate());
+		Assert.isNull(trip.getStartDateTrip());
+		Assert.isNull(trip.getEndDateTrip());
+		Assert.isNull(trip.getCancelledReason());
+		Assert.isNull(trip.getPrice());
+		Assert.notNull(trip.getNotes());
+		Assert.notNull(trip.getAuditRecords());
+		Assert.notNull(trip.getStories());
+		Assert.notNull(trip.getApplications());
+		Assert.notNull(trip.getFinders());
+		Assert.notNull(trip.getSurvivalClasses());
+		Assert.notNull(trip.getSponsorships());
+		Assert.notNull(trip.getStages());
+		Assert.notNull(trip.getHasValues());
+
+		super.unauthenticate();
+	}
+
+	@Test
+	public void testSave() {
+
+		super.authenticate("manager1");
+
+		Trip trip = null;
+		Trip tripSaved = null;
+		Collection<Trip> trips = null;
+
+		trip = this.tripService.findOne(7279);
+		trips = new ArrayList<Trip>();
+
+		trip.setDescription("Description TEST");
+		tripSaved = this.tripService.save(trip);
+		Assert.isTrue(tripSaved.getDescription().equals("Description TEST"));
+		trips = this.tripService.findAll();
+
+		Assert.isTrue(trips.contains(tripSaved));
+
+		super.unauthenticate();
+	}
+	@Test
+	public void testDelete() {
+
+		super.authenticate("manager1");
+
+		Trip trip = null;
+		Trip tripSaved = null;
+		Collection<Trip> trips = null;
+
+		trip = this.tripService.findOne(7279);
+		trips = new ArrayList<Trip>();
+
+		trip.setDescription("Description TEST");
+		trip.setPublicationDate(new Date(2020, 10, 20, 20, 10));
+		tripSaved = this.tripService.save(trip);
+		Assert.isTrue(tripSaved.getDescription().equals("Description TEST"));
+		this.tripService.delete(tripSaved);
+		trips = this.tripService.findAll();
+
+		Assert.isTrue(!trips.contains(tripSaved));
+
+		super.unauthenticate();
+	}
+}

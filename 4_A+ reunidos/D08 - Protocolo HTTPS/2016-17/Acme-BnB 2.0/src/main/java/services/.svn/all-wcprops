@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/178/Acme-BnB/src/main/java/services
+END
+FinderService.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/171/Acme-BnB/src/main/java/services/FinderService.java
+END
+TenantService.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/163/Acme-BnB/src/main/java/services/TenantService.java
+END
+SocialIdentityService.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/157/Acme-BnB/src/main/java/services/SocialIdentityService.java
+END
+ValueAttributeService.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/172/Acme-BnB/src/main/java/services/ValueAttributeService.java
+END
+AdministratorService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/84/Acme-BnB/src/main/java/services/AdministratorService.java
+END
+InvoiceService.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/172/Acme-BnB/src/main/java/services/InvoiceService.java
+END
+RequestService.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/173/Acme-BnB/src/main/java/services/RequestService.java
+END
+PropertyService.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/170/Acme-BnB/src/main/java/services/PropertyService.java
+END
+ActorService.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/157/Acme-BnB/src/main/java/services/ActorService.java
+END
+ConfigurationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/99/Acme-BnB/src/main/java/services/ConfigurationService.java
+END
+AmountService.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/15/Acme-BnB/src/main/java/services/AmountService.java
+END
+CommentClassService.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/96/Acme-BnB/src/main/java/services/CommentClassService.java
+END
+AuditService.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/175/Acme-BnB/src/main/java/services/AuditService.java
+END
+AttributeService.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/142/Acme-BnB/src/main/java/services/AttributeService.java
+END
+LessorService.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/178/Acme-BnB/src/main/java/services/LessorService.java
+END
+AuditorService.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/84/Acme-BnB/src/main/java/services/AuditorService.java
+END
+CommentService.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/110/Acme-BnB/src/main/java/services/CommentService.java
+END
+UserAccountService.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/25/Acme-BnB/src/main/java/services/UserAccountService.java
+END

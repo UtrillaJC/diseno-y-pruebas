@@ -1,0 +1,27 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+ingredient.name					= Nombre
+ingredient.description			= Descripción
+ingredient.picture				= Imagen
+
+ingredient.save					= Guardar
+ingredient.create				= Crear
+ingredient.cancel				= Volver
+ingredient.edit					= Editar
+ingredient.delete				= Borrar
+
+ingredient.add					= Añadir
+
+ingredient.showIngredient		= Mostrar Ingrediente
+ingredient.add.property			= Añadir propiedad
+ingredient.properties			= Propiedades
+
+ingredient.commit.error			= No se puede realizar esta acción. 
+ingredient.confirm.delete		= ¿Está seguro de borrar este ingrediente?
+

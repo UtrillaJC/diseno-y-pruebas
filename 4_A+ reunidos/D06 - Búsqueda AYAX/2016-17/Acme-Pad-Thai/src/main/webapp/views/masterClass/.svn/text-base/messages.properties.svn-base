@@ -1,0 +1,51 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+masterClass.title				= Title
+masterClass.description			= Description
+masterClass.cook				= Cook
+masterClass.learningMaterial	= Learning material
+
+
+masterClass.edit 				= Edit
+masterClass.save				= Save
+masterClass.cancel				= Cancel
+masterClass.back				= Back
+masterClass.create				= Create
+masterClass.delete				= Delete
+masterClass.confirm.delete		= ¿Are you sure to delete this material class?
+
+masterClass.register			= Register
+masterClass.unregister			= Unregister
+masterClass.unregister			= Unregister
+
+masterClass.promote				= Promote
+masterClass.demote				= Demote
+
+masterClass.isPromote			= Master classes promoted
+masterClass.isDemote			= Master classes demoted
+
+masterClass.confirm.unregister	= Unregister from this master class?
+
+masterClass.commit.error		= Can't complete your action
+masterClass.commit.ok			= Action sucessfully completed
+
+masterClass.learningMaterial.list	= Learning materials
+masterClass.learningMaterial.create	= Create learning material
+masterClass.addText					= Add text 
+masterClass.addPresentation			= Add presentation
+masterClass.addVideo				= Add video
+
+masterClass.register				= Register
+masterClass.unregister				= Unregister
+masterClass.isRegister				= Master classes that I am registered	
+masterClass.isNotRegister			= Master classes that I am not registered
+
+masterClass.confirm.unregister		= Unregister from this master class?
+
+

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/154/Acme-CarNGo/src/main/resources/spring/config
+END
+data.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/18/Acme-CarNGo/src/main/resources/spring/config/data.xml
+END
+packages.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/resources/spring/config/packages.xml
+END
+security.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/154/Acme-CarNGo/src/main/resources/spring/config/security.xml
+END
+i18n-l10n.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/83/Acme-CarNGo/src/main/resources/spring/config/i18n-l10n.xml
+END
+converters.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/29/Acme-CarNGo/src/main/resources/spring/config/converters.xml
+END
+tiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/83/Acme-CarNGo/src/main/resources/spring/config/tiles.xml
+END

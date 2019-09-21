@@ -1,0 +1,32 @@
+dashboard.min = Min:
+dashboard.average = Avg:
+dashboard.max = Max:
+dashboard.desviation = Desviation:
+dashboard.accepted		= Accepted
+dashboard.denied		= Denied
+dashboard.request		= Requests
+dashboard.user			= Usuario
+dashboard.name			= Name
+dashboard.surname		= Surnames
+dashboard.cancel		= Cancel
+dashboard.return		= Back
+dashboard.result		= Results
+dashboard.total			= Total
+dashboard.euros			= Euros
+
+dashboard.offers	= Offers
+dashboard.requests = Requests
+dashboard.actors = Actors
+
+dashboard.dashboard1	= Ratio of Offers versus requests
+dashboard.dashboard2	= Average number of offers and request per customer.
+dashboard.dashboard3	= Average number of applications per offer or request.
+dashboard.dashboard4	= The customer who has more applications accepted.
+dashboard.dashboard5	= The customer who has more applications denied.
+dashboard.dashboard6	= Average number of comments per:
+dashboard.dashboard7	= Average number of comments posted by administrators and customers.
+dashboard.dashboard8	= The actors who have posted ±10% the average number of comments per actor.
+dashboard.dashboard9	= The minimum, the average, and the maximum number of messages sent per actor.
+dashboard.dashboard10	= The minimum, the average, and the maximum number of messages received per actor.
+dashboard.dashboard11	= The actors who have sent more messages.
+dashboard.dashboard12	= The actors who have got more messages.

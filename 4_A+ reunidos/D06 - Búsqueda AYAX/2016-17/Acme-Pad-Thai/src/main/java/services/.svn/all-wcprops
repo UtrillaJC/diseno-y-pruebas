@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/services
+END
+FeeService.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/24/Acme-Pad-Thai/src/main/java/services/FeeService.java
+END
+BillService.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/services/BillService.java
+END
+MessageService.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/67/Acme-Pad-Thai/src/main/java/services/MessageService.java
+END
+CookService.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/108/Acme-Pad-Thai/src/main/java/services/CookService.java
+END
+SocialIdentityService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/61/Acme-Pad-Thai/src/main/java/services/SocialIdentityService.java
+END
+UserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/81/Acme-Pad-Thai/src/main/java/services/UserService.java
+END
+AdministratorService.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/122/Acme-Pad-Thai/src/main/java/services/AdministratorService.java
+END
+RecipeService.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/125/Acme-Pad-Thai/src/main/java/services/RecipeService.java
+END
+StepToCookService.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/125/Acme-Pad-Thai/src/main/java/services/StepToCookService.java
+END
+CampaignService.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/services/CampaignService.java
+END
+IngredientService.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/108/Acme-Pad-Thai/src/main/java/services/IngredientService.java
+END
+ContestService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/services/ContestService.java
+END
+PersonService.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/82/Acme-Pad-Thai/src/main/java/services/PersonService.java
+END
+PropertyService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/93/Acme-Pad-Thai/src/main/java/services/PropertyService.java
+END
+SpamTermService.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/105/Acme-Pad-Thai/src/main/java/services/SpamTermService.java
+END
+TasteService.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/99/Acme-Pad-Thai/src/main/java/services/TasteService.java
+END
+SponsorService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/108/Acme-Pad-Thai/src/main/java/services/SponsorService.java
+END
+PresentationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/91/Acme-Pad-Thai/src/main/java/services/PresentationService.java
+END
+CommentService.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/128/Acme-Pad-Thai/src/main/java/services/CommentService.java
+END
+EndorserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/136/Acme-Pad-Thai/src/main/java/services/EndorserService.java
+END
+UserAccountService.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/67/Acme-Pad-Thai/src/main/java/services/UserAccountService.java
+END
+LearningMaterialService.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/91/Acme-Pad-Thai/src/main/java/services/LearningMaterialService.java
+END
+IngredientLineService.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/125/Acme-Pad-Thai/src/main/java/services/IngredientLineService.java
+END
+CreditCardService.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/22/Acme-Pad-Thai/src/main/java/services/CreditCardService.java
+END
+BannerService.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/41/Acme-Pad-Thai/src/main/java/services/BannerService.java
+END
+TextService.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/91/Acme-Pad-Thai/src/main/java/services/TextService.java
+END
+FolderService.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/139/Acme-Pad-Thai/src/main/java/services/FolderService.java
+END
+NutritionistService.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/108/Acme-Pad-Thai/src/main/java/services/NutritionistService.java
+END
+ActorService.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/78/Acme-Pad-Thai/src/main/java/services/ActorService.java
+END
+MasterClassService.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/102/Acme-Pad-Thai/src/main/java/services/MasterClassService.java
+END
+RegistrationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/94/Acme-Pad-Thai/src/main/java/services/RegistrationService.java
+END
+CurriculumService.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/136/Acme-Pad-Thai/src/main/java/services/CurriculumService.java
+END
+VideoService.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/91/Acme-Pad-Thai/src/main/java/services/VideoService.java
+END
+CategoryService.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/119/Acme-Pad-Thai/src/main/java/services/CategoryService.java
+END

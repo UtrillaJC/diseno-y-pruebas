@@ -1,0 +1,80 @@
+10
+
+dir
+146
+https://repositorio.informatica.us.es/svn/3tmxj2wqn4mfvdxkexl/Acme-Pad-Thai/src/main/webapp
+https://repositorio.informatica.us.es/svn/3tmxj2wqn4mfvdxkexl
+
+
+
+2016-12-22T17:55:11.946199Z
+146
+josnavmar1
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0a8e7beb-a465-4955-af5f-9d96c97fe374
+
+META-INF
+dir
+
+WEB-INF
+dir
+
+favicon.ico
+file
+
+
+
+
+2016-12-22T18:22:16.962000Z
+168881a70ba53d2762cb22e81a7d139a
+2016-12-19T03:42:51.667237Z
+106
+josnavmar1
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6233
+
+images
+dir
+
+scripts
+dir
+
+styles
+dir
+
+views
+dir
+

@@ -1,0 +1,111 @@
+package services;
+
+
+
+
+
+
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import org.springframework.util.Assert;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+
+import domain.Admin;
+import domain.Configuration;
+import domain.LegalText;
+
+import utilities.AbstractTest;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:spring/datasource.xml","classpath:spring/config/packages.xml"})
+
+@Transactional
+public class ConfigurationServiceTest extends AbstractTest {
+	
+	// Service under test ----------------------------------------------------------
+	@Autowired
+	private ConfigurationService configurationService;
+	
+	@Autowired
+	private AdminService adminService;
+	
+	// Tests ------------------------------------------------------------------------
+	
+	@Test
+	public void testCreate(){
+		
+		Configuration configuration;
+		
+		authenticate("admin1");
+		//Admin a=adminService.findByPrincipal();
+		configuration=configurationService.create();
+		Assert.isNull(configuration.getBanner());
+		Assert.isNull(configuration.getCountryCode());
+		Assert.isNull(configuration.getEnglishWelcome());
+		Assert.notNull(configuration.getFinderCache());
+		Assert.notNull(configuration.getMaxTripsDisplay());
+		Assert.isNull(configuration.getSpamWords());
+		Assert.isNull(configuration.getSpanishWelcome());
+		Assert.isNull(configuration.getVat());
+		super.unauthenticate();
+	} 
+	@Test
+	public void testSave(){
+		Configuration configuration,saved;
+		String spamWord = "call now";
+		Collection<String> spamWords= new ArrayList<String>();
+		spamWords.add(spamWord);
+		super.authenticate("admin1");
+		//Admin a= adminService.findByPrincipal();
+		configuration= configurationService.create();
+		configuration.setBanner("");
+		configuration.setCountryCode("");
+		configuration.setEnglishWelcome("");
+		configuration.setFinderCache(0);
+		configuration.setMaxTripsDisplay(1);
+		configuration.setSpamWords(spamWords);
+		configuration.setSpanishWelcome("Hola");
+		configuration.setVat(0.21);
+		saved =configurationService.save(configuration);
+		Integer id=saved.getId();
+		Assert.isTrue(configurationService.findOne(id).equals(saved));
+	}
+	
+	@Test
+	public void testDelete(){
+		Configuration configuration,saved,configurationRetrieved;
+		String spamWord = "call now";
+		Collection<String> spamWords= new ArrayList<String>();
+		spamWords.add(spamWord);
+		super.authenticate("admin1");
+		//Admin a= adminService.findByPrincipal();
+		configuration= configurationService.create();
+		configuration.setBanner("");
+		configuration.setCountryCode("");
+		configuration.setEnglishWelcome("");
+		configuration.setFinderCache(0);
+		configuration.setMaxTripsDisplay(1);
+		configuration.setSpamWords(spamWords);
+		configuration.setSpanishWelcome("Hola");
+		configuration.setVat(0.21);
+		saved =configurationService.save(configuration);
+		Integer id=saved.getId();
+		this.configurationService.delete(saved);
+		
+		configurationRetrieved = configurationService.findOne(id);
+		Assert.isNull(configurationRetrieved);
+		super.unauthenticate();
+		
+	}
+	
+
+}

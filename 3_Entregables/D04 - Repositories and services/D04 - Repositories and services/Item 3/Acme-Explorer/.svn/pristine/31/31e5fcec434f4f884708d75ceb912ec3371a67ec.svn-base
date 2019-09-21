@@ -1,0 +1,107 @@
+
+package services;
+
+import java.util.Collection;
+
+import javax.transaction.Transactional;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.Assert;
+
+import utilities.AbstractTest;
+import domain.Curriculum;
+import domain.Ranger;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {
+	"classpath:spring/datasource.xml", "classpath:spring/config/packages.xml"
+})
+@Transactional
+public class CurriculumServiceTest extends AbstractTest {
+
+	// Service under test ---------------------------------
+
+	@Autowired
+	private CurriculumService	curriculumService;
+
+
+	// Tests ----------------------------------------------
+
+	@Test
+	public void testCreate() {
+
+		super.authenticate("ranger1");								// Simulamos que estamos autenticados en el sistema
+
+		Curriculum curriculum = null;
+		final Ranger ranger = null;
+
+		curriculum = this.curriculumService.create();			// Creamos el curriculum utilizando el servicio
+
+		// Comprobamos que los atributos...
+
+		Assert.notNull(curriculum.getTicker());						// 
+
+		// Comprobamos que sus relaciones...
+
+		Assert.notNull(ranger);
+		Assert.notNull(curriculum.getEducationRecords());
+		Assert.notNull(curriculum.getEndorserRecords());
+		Assert.notNull(curriculum.getMiscellaneousRecords());
+		Assert.notNull(curriculum.getProfessionalRecords());
+		Assert.isNull(curriculum.getPersonalRecord()); 				// TODO: ¿seguro?
+
+		super.authenticate(null);									// Eliminamos la simulación de la autenticación
+	}
+
+	@Test
+	public void testSave() {
+
+		super.authenticate("ranger1");								// Simulamos que estamos autenticados en el sistema
+
+		Curriculum curriculum = null;
+		Curriculum saved = null;
+		Collection<Curriculum> curriculums = null;
+
+		curriculum = this.curriculumService.create();			// Creamos el curriculum utilizando el servicio
+
+		// Modificamos los atributos del curriculum
+
+		// TODO: Hacer una query para comprobar que sea único el ticker
+
+		saved = this.curriculumService.save(curriculum);			// Persistimos el curriculum en la base de datos
+		curriculums = this.curriculumService.findAll();				// Obtenemos todos los curriculums de la base de datos
+
+		Assert.isTrue(curriculums.contains(saved));					// Comprobamos que está en la base de datos
+
+		super.unauthenticate();										// Eliminamos la simulación de la autenticación
+	}
+
+	@Test
+	public void testDelete() {
+
+		super.authenticate("ranger1");								// Simulamos que estamos autenticados en el sistema
+
+		Curriculum curriculum = null;
+		Curriculum saved = null;
+		Collection<Curriculum> curriculums = null;
+
+		curriculum = this.curriculumService.create();			// Creamos el curriculum utilizando el servicio
+
+		// Modificamos los atributos del curriculum
+
+		// TODO: hacer una query para comprobar que sea único
+		curriculum.setTicker("111111-ABCD");
+
+		saved = this.curriculumService.save(curriculum);			// Persistimos el curriculum en la base de datos...
+		this.curriculumService.delete(saved);						// ...y lo borramos de ella
+		curriculums = this.curriculumService.findAll();				// Obtenemos todos los curriculums de la base de datos
+
+		Assert.isTrue(!curriculums.contains(saved));				// Comprobamos que se ha eliminado y no persiste en la base de datos
+
+		super.unauthenticate();										// Eliminamos la simulación de la autenticación
+	}
+}

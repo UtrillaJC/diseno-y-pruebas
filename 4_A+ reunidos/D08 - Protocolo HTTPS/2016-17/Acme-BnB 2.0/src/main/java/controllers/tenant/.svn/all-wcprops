@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/172/Acme-BnB/src/main/java/controllers/tenant
+END
+FinderTenantController.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/171/Acme-BnB/src/main/java/controllers/tenant/FinderTenantController.java
+END
+TenantController.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/55/Acme-BnB/src/main/java/controllers/tenant/TenantController.java
+END
+CommentTenantController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/110/Acme-BnB/src/main/java/controllers/tenant/CommentTenantController.java
+END
+RequestTenantController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/100/Acme-BnB/src/main/java/controllers/tenant/RequestTenantController.java
+END
+InvoiceTenantController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/172/Acme-BnB/src/main/java/controllers/tenant/InvoiceTenantController.java
+END

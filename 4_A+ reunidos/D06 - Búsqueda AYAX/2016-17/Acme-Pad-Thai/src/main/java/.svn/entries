@@ -1,0 +1,52 @@
+10
+
+dir
+146
+https://repositorio.informatica.us.es/svn/3tmxj2wqn4mfvdxkexl/Acme-Pad-Thai/src/main/java
+https://repositorio.informatica.us.es/svn/3tmxj2wqn4mfvdxkexl
+
+
+
+2016-12-22T17:28:35.005946Z
+145
+sercaroli
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+0a8e7beb-a465-4955-af5f-9d96c97fe374
+
+controllers
+dir
+
+converters
+dir
+
+domain
+dir
+
+forms
+dir
+
+repositories
+dir
+
+security
+dir
+
+services
+dir
+
+utilities
+dir
+

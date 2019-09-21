@@ -1,0 +1,89 @@
+
+package services;
+
+import java.util.Collection;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import repositories.RegisterRepository;
+import domain.Register;
+import domain.Trip;
+
+@Service
+@Transactional
+public class RegisterService {
+
+	// Managed Repository =============================================================================
+
+	@Autowired
+	private RegisterRepository	registerRepository;
+
+
+	// Supported Services =============================================================================
+
+	// Constructor methods ============================================================================
+
+	public RegisterService() {
+		super();
+	}
+
+	// Simple CRUD methods ============================================================================
+
+	public Register create(final Trip trip) {
+
+		Register result = null;
+		result = new Register();
+
+		result.setMoment(new Date(System.currentTimeMillis() - 1000));
+		result.setTrip(trip);
+		trip.getRegisters().add(result);
+
+		return result;
+
+	}
+	public Collection<Register> findAll() {
+
+		Collection<Register> result = null;
+
+		result = this.registerRepository.findAll();
+
+		return result;
+
+	}
+
+	public Register findOne(final int registerId) {
+
+		Register result = null;
+
+		result = this.registerRepository.findOne(registerId);
+
+		return result;
+
+	}
+
+	public Register save(final Register register) {
+
+		Assert.notNull(register);
+
+		Register result = null;
+
+		result = this.registerRepository.save(register);
+
+		return result;
+
+	}
+
+	public void delete(final Register register) {
+
+		Assert.notNull(register);
+
+		this.registerRepository.delete(register);
+
+	}
+
+	// Other Business Methods =========================================================================
+}

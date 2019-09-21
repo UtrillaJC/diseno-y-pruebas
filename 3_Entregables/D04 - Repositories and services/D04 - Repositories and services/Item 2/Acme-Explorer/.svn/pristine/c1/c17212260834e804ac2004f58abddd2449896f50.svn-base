@@ -1,0 +1,86 @@
+
+package services;
+
+import java.util.Date;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import utilities.AbstractTest;
+import domain.Curriculum;
+import domain.EducationRecord;
+import domain.Ranger;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {
+	"classpath:spring/datasource.xml", "classpath:spring/config/packages.xml"
+})
+@Transactional
+public class EducationRecordServiceTest extends AbstractTest {
+
+	// Service under test --------------------------------------------------
+	@Autowired
+	private EducationRecordService	educationalrecordService;
+
+	@Autowired
+	private RangerService			rangerService;
+
+	@Autowired
+	private CurriculumService		curriculumService;
+
+
+	// Tests ------------------------------------------------------------------
+
+	@Test
+	public void testCreate() {
+		Ranger ranger = null;
+		EducationRecord educationRecord = null;
+
+		super.authenticate("ranger1");
+		ranger = this.rangerService.findByPrincipal();
+		educationRecord = this.educationalrecordService.create();
+		Assert.notNull(educationRecord.getComments());
+	}
+	@Test
+	public void testSave() {
+		Ranger ranger = null;
+		EducationRecord educationRecord = null;
+		EducationRecord saved = null;
+
+		super.authenticate("ranger1");
+		ranger = this.rangerService.findByPrincipal();
+		educationRecord = this.educationalrecordService.create();
+		educationRecord.setTitle("EducationRecord test");
+		educationRecord.setStartDate(new Date(02 / 05 / 2000));
+		educationRecord.setEndDate(new Date(30 / 01 / 2003));
+		educationRecord.setInstitution("institution");
+		educationRecord.setAttachment("http://www.attachmentTest.com");
+
+		saved = this.educationalrecordService.save(educationRecord);
+		Assert.isTrue(saved.getTitle().equals("EducationRecord test"));
+
+	}
+	@Test
+	public void testDelete() {
+		Ranger ranger = null;
+		EducationRecord educationRecord = null;
+		Curriculum currirculum = null;
+
+		super.authenticate("ranger1");
+		ranger = this.rangerService.findByPrincipal();
+		educationRecord = this.educationalrecordService.findOne(7215);
+		currirculum = this.curriculumService.findOne(7213);
+
+		this.educationalrecordService.delete(educationRecord, currirculum);
+
+		Assert.isTrue(!currirculum.getEducationRecords().contains(educationRecord));
+		Assert.isTrue(!this.educationalrecordService.findAll().contains(educationRecord));
+		Assert.isTrue(!ranger.getCurriculum().getEducationRecords().contains(educationRecord));
+	}
+
+}

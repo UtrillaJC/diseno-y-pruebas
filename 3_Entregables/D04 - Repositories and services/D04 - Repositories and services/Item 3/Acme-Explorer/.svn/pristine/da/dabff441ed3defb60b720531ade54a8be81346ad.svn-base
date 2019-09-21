@@ -1,0 +1,114 @@
+
+package services;
+
+import java.util.Collection;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import repositories.AuditRecordRepository;
+import domain.AuditRecord;
+import domain.Auditor;
+import domain.Trip;
+
+@Service
+@Transactional
+public class AuditRecordService {
+
+	// ManagedService
+	@Autowired
+	private AuditRecordRepository	auditRecordRepository;
+
+	// Supporting service -------------------------------------------
+
+	@Autowired
+	private AuditorService			auditorService;
+
+
+	//@Autowired
+	private TripService tripService;
+
+	// Simple CRUD methods ------------------------------------------
+
+	public AuditRecord create(final Auditor auditor) {
+		final AuditRecord auditRecord = new AuditRecord();
+		auditRecord.setMoment(new Date(System.currentTimeMillis() - 1000));
+		auditRecord.setAuditor(auditor);
+		return auditRecord;
+	}
+
+	public Collection<AuditRecord> findAll() {
+		return this.auditRecordRepository.findAll();
+	}
+
+	public AuditRecord findOne(final int id) {
+		return this.auditRecordRepository.findOne(id);
+	}
+
+	public AuditRecord save(final AuditRecord auditRecord) {
+		Assert.notNull(auditRecord);
+
+		
+		checkByPrincipal(auditRecord);
+
+
+		
+
+		return this.auditRecordRepository.save(auditRecord);
+	}
+
+	
+	public void delete(AuditRecord auditRecord){
+		checkByPrincipal(auditRecord);
+
+
+	
+
+		Assert.isTrue(!auditRecord.getFinalVersion());
+		this.auditRecordRepository.delete(auditRecord);
+	}
+
+	// Others business methods
+
+	public AuditRecord findOneToEdit(final int auditRecordId) {
+		final AuditRecord auditRecord = this.auditRecordRepository.findOne(auditRecordId);
+		Assert.isTrue(!auditRecord.getFinalVersion());
+
+		checkByPrincipal(auditRecord);
+
+		return auditRecord;
+
+	}
+
+	
+	public void checkByPrincipal(AuditRecord auditRecord){
+		Auditor principal = auditorService.findByPrincipal();
+
+
+	
+		Assert.isTrue(auditRecord.getAuditor().equals(principal));
+
+	}
+
+	
+	public AuditRecord assignAuditRecordToTrip(AuditRecord auditRecord,Trip trip){
+
+
+
+		Assert.notNull(trip);
+		Assert.notNull(auditRecord);
+
+		checkByPrincipal(auditRecord);
+
+		auditRecord.setTrip(trip);
+		trip.getAuditRecords().add(auditRecord);
+		tripService.save(trip);
+		this.save(auditRecord);
+		return auditRecord;
+
+	}
+
+}

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/webapp/WEB-INF/tags
+END
+submit.tag
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/webapp/WEB-INF/tags/submit.tag
+END
+cancel.tag
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/webapp/WEB-INF/tags/cancel.tag
+END
+textarea.tag
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/webapp/WEB-INF/tags/textarea.tag
+END
+password.tag
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/webapp/WEB-INF/tags/password.tag
+END
+select.tag
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/webapp/WEB-INF/tags/select.tag
+END
+textbox.tag
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/webapp/WEB-INF/tags/textbox.tag
+END

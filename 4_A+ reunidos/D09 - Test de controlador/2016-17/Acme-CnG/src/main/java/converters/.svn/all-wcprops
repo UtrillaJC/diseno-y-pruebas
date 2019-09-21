@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/132/Acme-CarNGo/src/main/java/converters
+END
+MessageToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/MessageToStringConverter.java
+END
+StringToCommentConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/StringToCommentConverter.java
+END
+BannerToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/BannerToStringConverter.java
+END
+StringToBannerConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/StringToBannerConverter.java
+END
+AdministratorToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/AdministratorToStringConverter.java
+END
+StringToMessageConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/StringToMessageConverter.java
+END
+ApplicationToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/ApplicationToStringConverter.java
+END
+StringToAdministratorConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/StringToAdministratorConverter.java
+END
+ServiceToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/ServiceToStringConverter.java
+END
+ActorToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/ActorToStringConverter.java
+END
+StringToApplicationConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/StringToApplicationConverter.java
+END
+CommentClassToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/CommentClassToStringConverter.java
+END
+StringToCommentClassConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/StringToCommentClassConverter.java
+END
+StringToServiceConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/StringToServiceConverter.java
+END
+StringToActorConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/StringToActorConverter.java
+END
+StringToCustomerConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/StringToCustomerConverter.java
+END
+CustomerToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/CustomerToStringConverter.java
+END
+CommentToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/15/Acme-CarNGo/src/main/java/converters/CommentToStringConverter.java
+END

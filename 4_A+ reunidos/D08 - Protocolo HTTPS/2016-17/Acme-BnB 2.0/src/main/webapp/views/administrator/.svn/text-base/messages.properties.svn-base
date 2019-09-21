@@ -1,0 +1,17 @@
+# messages.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+edit.cancel							= Cancel
+edit.save 							= Save
+edit.commit.error					= Oops! something was wrong,contact with your administrator
+edit.name							= Name
+edit.surname						= Surnames					
+edit.email							= Email
+edit.phone							= Phone
+edit.picture						= Picture
+

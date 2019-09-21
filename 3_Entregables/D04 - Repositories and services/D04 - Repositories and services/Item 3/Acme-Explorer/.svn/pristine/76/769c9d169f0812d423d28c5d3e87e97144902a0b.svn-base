@@ -1,0 +1,126 @@
+
+package services;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import repositories.ExplorerRepository;
+import security.LoginService;
+import security.UserAccount;
+import domain.Application;
+import domain.Contact;
+import domain.Explorer;
+import domain.Folder;
+import domain.Message;
+import domain.SocialIdentity;
+import domain.Story;
+
+@Service
+@Transactional
+public class ExplorerService {
+
+	// Managed repository -----------------------------------------------------
+
+	@Autowired
+	private ExplorerRepository	explorerRepository;
+
+	// Supporting services ----------------------------------------------------
+
+	@Autowired
+	private UserAccountService	userAccountService;
+
+	@Autowired
+	private FolderService		folderService;
+
+	@Autowired
+	private FinderService		finderService;
+
+
+	// Constructors -----------------------------------------------------------
+
+	public ExplorerService() {
+		super();
+	}
+
+	// Simple CRUD methods ----------------------------------------------------
+
+	public Explorer create() {
+
+		Explorer result = null;
+		result = new Explorer();
+		result.setDeactivated(false);
+		result.setApplications(new ArrayList<Application>());
+		result.setContacts(new ArrayList<Contact>());
+		result.setStories(new ArrayList<Story>());
+		result.setFolders(new ArrayList<Folder>());
+		result.setRecipientMessages(new ArrayList<Message>());
+		result.setSentMessages(new ArrayList<Message>());
+		result.setSocialIdentities(new ArrayList<SocialIdentity>());
+		final UserAccount userAccount = this.userAccountService.create("EXPLORER");
+		result.setUserAccount(userAccount);
+		//		final Finder finder = this.finderService.create(result);
+		//		result.setFinder(finder);
+		//		finder.setExplorer(result);
+		return result;
+	}
+
+	public Explorer findOne(final int explorerId) {
+
+		Explorer result = null;
+		result = this.explorerRepository.findOne(explorerId);
+		return result;
+	}
+
+	public Collection<Explorer> findAll() {
+
+		Collection<Explorer> result = null;
+		result = this.explorerRepository.findAll();
+		return result;
+	}
+
+	//	public Explorer save(final Explorer explorer) {
+
+	//		Assert.notNull(explorer);
+	//
+	//		Explorer result = null;
+	//		final Finder finder = this.finderService.defaultFinder(explorer);
+	//		explorer.setFinder(finder);
+	//		result = this.explorerRepository.save(explorer);
+	//		if (result.getFolders().isEmpty()) {
+	//			final Collection<Folder> folders = this.folderService.defaultFolders(result);
+	//			result.setFolders(folders);
+	//			//			final Finder finder = this.finderService.defaultFinder(result);	// El método defaultFinder implementara la creación y el guardado en base de datos de un finder.
+	//			//			result.setFinder(finder);
+	//			result = this.explorerRepository.save(result);
+	//		}
+	//		return result;
+	//	}
+
+	public void delete(final Explorer explorer) {
+
+		this.explorerRepository.delete(explorer);
+	}
+
+	// Other business methods -------------------------------------------------
+
+	public Explorer findByPrincipal() {
+
+		Explorer result = null;
+		final UserAccount userAccount = LoginService.getPrincipal();
+		result = this.findByUserAccountId(userAccount.getId());
+		return result;
+	}
+
+	public Explorer findByUserAccountId(final int userAccountId) {
+
+		Explorer result = null;
+		result = this.explorerRepository.findByUserAccountId(userAccountId);
+		return result;
+	}
+
+}

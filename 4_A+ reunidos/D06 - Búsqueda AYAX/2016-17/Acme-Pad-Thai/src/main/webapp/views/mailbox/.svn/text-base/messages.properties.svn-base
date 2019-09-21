@@ -1,0 +1,27 @@
+##Mailbox##
+
+mailbox.name				= Name
+mailbox.sender				= Sender
+mailbox.receiver			= Receiver
+mailbox.subject				= Subject
+mailbox.date				= Date
+
+mailbox.createFolder		= Create Folder
+mailbox.compose				= Compose
+mailbox.back				= Back
+mailbox.move				= Move
+mailbox.viewMessage			= View Message
+mailbox.folders				= Folders
+mailbox.messages			= Messages
+
+##Messages&&Folders##
+
+mailbox.to					= To
+mailbox.subject				= Subject
+mailbox.send				= Send
+mailbox.cancel				= Cancel
+mailbox.reply				= Reply
+mailbox.manageFolder		= Manage Folders
+
+
+

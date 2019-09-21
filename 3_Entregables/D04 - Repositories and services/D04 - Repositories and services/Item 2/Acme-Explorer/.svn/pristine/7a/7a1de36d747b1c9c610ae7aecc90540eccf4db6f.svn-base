@@ -1,0 +1,292 @@
+
+package services;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
+
+import repositories.TripRepository;
+import security.LoginService;
+import security.UserAccount;
+import domain.Application;
+import domain.AuditRecord;
+import domain.Auditor;
+import domain.Explorer;
+import domain.Finder;
+import domain.HasValue;
+import domain.Manager;
+import domain.Money;
+import domain.Note;
+import domain.Sponsorship;
+import domain.Stage;
+import domain.Story;
+import domain.SurvivalClass;
+import domain.Trip;
+
+@Service
+public class TripService {
+
+	// Managed repository -----------------------------------------------------
+
+	@Autowired
+	private TripRepository	tripRepository;
+
+	// Supporting services ----------------------------------------------------
+
+	@Autowired
+	private ManagerService	managerService;
+
+	@Autowired
+	private ExplorerService	explorerService;
+
+	@Autowired
+	private AuditorService	auditorService;
+
+
+	// Constructors -----------------------------------------------------------
+
+	public TripService() {
+		super();
+	}
+
+	// Simple CRUD methods ----------------------------------------------------
+
+	public Trip create(final Collection<Stage> stages) {
+
+		Assert.notNull(stages);
+
+		Manager manager = null;
+		Collection<Note> notes = null;
+		Collection<AuditRecord> auditRecords = null;
+		Collection<Story> stories = null;
+		Collection<Application> applications = null;
+		Collection<Finder> finders = null;
+		Collection<HasValue> hasValues = null;
+		Collection<Sponsorship> sponsorships = null;
+		Collection<SurvivalClass> survivalClasses = null;
+
+		manager = this.managerService.findByPrincipal();
+		notes = new ArrayList<Note>();
+		auditRecords = new ArrayList<AuditRecord>();
+		stories = new ArrayList<Story>();
+		applications = new ArrayList<Application>();
+		finders = new ArrayList<Finder>();
+		hasValues = new ArrayList<HasValue>();
+		sponsorships = new ArrayList<Sponsorship>();
+		survivalClasses = new ArrayList<SurvivalClass>();
+		Assert.isInstanceOf(Manager.class, manager);
+
+		Trip res = new Trip();
+
+		res = this.generateTicker(res);
+		res.setRequirements(new ArrayList<String>());
+		res.setStages(stages);
+		res.setNotes(notes);
+		res.setAuditRecords(auditRecords);
+		res.setStories(stories);
+		res.setApplications(applications);
+		res.setFinders(finders);
+		res.setHasValues(hasValues);
+		res.setSponsorships(sponsorships);
+		res.setSurvivalClasses(survivalClasses);
+
+		return res;
+
+	}
+
+	public Collection<Trip> findAll() {
+
+		Collection<Trip> res = null;
+		res = this.tripRepository.findAll();
+		return res;
+	}
+
+	public Trip findOne(final int tripId) {
+
+		Trip res = null;
+		res = this.tripRepository.findOne(tripId);
+		return res;
+	}
+
+	public Trip save(final Trip trip, final Stage stage) {
+
+		Assert.notNull(trip);
+		Assert.notNull(stage);
+
+		Trip res = null;
+		Manager principal = null;
+		Collection<Stage> stages = null;
+
+		res = new Trip();
+		stages = new ArrayList<Stage>();
+		principal = this.managerService.findByPrincipal();
+		Assert.isInstanceOf(Manager.class, principal);
+
+		res.setPrice(this.getPrice(trip));
+		res = this.tripRepository.save(trip);
+
+		stages.add(stage);
+		trip.setStages(stages);
+		return res;
+	}
+
+	public void delete(final Trip trip) {
+
+		Assert.notNull(trip);
+		Assert.isTrue(this.checkDeleteByPublicationDate(trip));
+		this.tripRepository.delete(trip);
+
+	}
+	// Other business methods -------------------------------------------------
+
+	public boolean checkDeleteByPublicationDate(final Trip trip) {
+
+		final Date date = new Date();
+
+		return date.before(trip.getPublicationDate());
+
+	}
+
+	public Trip save(final Trip trip) {
+
+		Assert.notNull(trip);
+
+		Trip res = null;
+		Auditor auditor = null;
+
+		res = new Trip();
+		auditor = this.auditorService.findByPrincipal();
+		Assert.isInstanceOf(Auditor.class, auditor);
+
+		res.setPrice(this.getPrice(trip));
+		res = this.tripRepository.save(trip);
+
+		return res;
+	}
+
+	public Trip unssignedStageOfTrip(final Trip trip, final Stage stage) {
+
+		Assert.notNull(trip);
+		Assert.notNull(stage);
+
+		Trip res = null;
+
+		trip.getStages().remove(stage);
+		res = this.save(trip, stage);
+
+		return res;
+	}
+
+	public Trip saveExplorer(final Trip trip) {
+
+		Assert.notNull(trip);
+
+		Explorer explorer = null;
+		explorer = this.explorerService.findByPrincipal();
+		Assert.isInstanceOf(Explorer.class, explorer);
+
+		Trip res = null;
+
+		res = this.tripRepository.save(trip);
+		return res;
+	}
+
+	public Manager findByPrincipal() {
+
+		Manager result = null;
+		final UserAccount userAccount = LoginService.getPrincipal();
+		result = this.findByUserAccountId(userAccount.getId());
+		return result;
+	}
+
+	public Manager findByUserAccountId(final int userAccountId) {
+
+		Manager result = null;
+		result = this.managerService.findByUserAccountId(userAccountId);
+		return result;
+	}
+
+	public Collection<Double> avgMinMaxDevApplicationsPerTrip() {
+		Collection<Double> res = null;
+		res = this.tripRepository.avgMinMaxDevApplicationsPerTrip();
+		return res;
+	}
+
+	public Collection<Double> avgMinMaxDevPriceOfTheTrips() {
+		Collection<Double> res = null;
+		res = this.tripRepository.avgMinMaxDevPriceOfTheTrips();
+		return res;
+	}
+
+	public String ratioOfTripsCancelledVsTotalTripsOrganized() {
+		String res = null;
+		res = this.tripRepository.ratioOfTripsCancelledVsTotalTripsOrganized();
+		return res;
+	}
+
+	public String listingTrips10PercentMoraApplicantionsThanAvg() {
+		String res = null;
+		res = this.tripRepository.listingTrips10PercentMoraApplicantionsThanAvg();
+		return res;
+	}
+
+	public Collection<Double> minMaxAvgDevNotesPerTrip() {
+		Collection<Double> res = null;
+		res = this.tripRepository.minMaxAvgDevNotesPerTrip();
+		return res;
+	}
+
+	public Collection<Double> minMaxAvgDevAuditRecordPerTrip() {
+		Collection<Double> res = null;
+		res = this.tripRepository.minMaxAvgDevAuditRecordPerTrip();
+		return res;
+	}
+
+	public Double ratioOfTripsWithAnyAuditRecord() {
+		Double res = null;
+		res = this.tripRepository.ratioOfTripsWithAnyAuditRecord();
+		return res;
+	}
+
+	public Trip generateTicker(final Trip trip) {
+
+		final Trip result = trip;
+		String ticker = new String();
+
+		final Integer year = Calendar.getInstance().get(Calendar.YEAR) % 100;
+		final Integer month = Calendar.getInstance().get(Calendar.MONTH);
+		final Integer day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+
+		ticker = year.toString() + month.toString() + day.toString() + "-";
+
+		final String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		final int N = alphabet.length();
+
+		final Random r = new Random();
+
+		for (int i = 0; i < 4; i++)
+			ticker += alphabet.charAt(r.nextInt(N));
+
+		result.setTicker(ticker);
+
+		return result;
+	}
+
+	public Money getPrice(final Trip trip) {
+		final Money price = new Money();
+		Double amount = 0.0;
+
+		for (final Stage s : trip.getStages())
+			amount += s.getPrice().getAmount();
+		price.setAmount(amount);
+
+		return price;
+	}
+
+}

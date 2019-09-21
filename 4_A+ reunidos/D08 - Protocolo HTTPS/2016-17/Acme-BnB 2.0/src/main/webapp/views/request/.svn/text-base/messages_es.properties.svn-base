@@ -1,0 +1,31 @@
+# messages_es.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+request = Reserva
+request.checkInDate		= Fecha de entrada
+request.checkOutDate		= Fecha de salida
+request.smoker		= Fumador/a
+request.creditCard	= Tarjeta de crédito
+request.status	= Estado
+request.invoice	= Solicitar factura
+request.create		=	Crear
+request.cancel			= 	Cancelar
+request.save				=	Guardar
+request.back = Volver
+request.tenant = Tenant
+
+creditCard.brandName = Marca de la tarjeta
+creditCard.holderName = Nombre del titular
+creditCard.number = Número
+creditCard.expirationMonth = Mes de expiración
+creditCard.expirationYear = Año de expiración
+creditCard.cvvCode = Código CVV
+
+request.commit.error	= No se pudo realizar la operación
+request.deny 	= Rechazar
+request.accept	= Aceptar

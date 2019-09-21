@@ -1,0 +1,97 @@
+package services;
+
+import java.util.Collection;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import domain.Auditor;
+import domain.Manager;
+import domain.Note;
+import domain.Trip;
+
+import repositories.ManagerRepository;
+import repositories.NoteRepository;
+import security.LoginService;
+import security.UserAccount;
+
+@Service
+@Transactional
+public class NoteService {
+	
+	// Managed repository --------------------------------------
+	
+	@Autowired
+	private NoteRepository noteRepository;
+	
+	// Supporting services ---------------------------------------
+	
+	@Autowired
+	private ManagerService managerService;
+	
+	@Autowired
+	//private TripService tripService;
+	
+	// Simple CRUD methods ------------------------------------
+	
+	public Note create(Auditor auditor){
+		Note note= new Note();
+		note.setMoment(new Date(System.currentTimeMillis()-1000));
+		note.setAuditor(auditor);
+		auditor.getNotes().add(note);
+		
+		return note;
+	}
+	
+	public Collection<Note> findAll(){
+		return this.noteRepository.findAll();
+	}
+	
+	public Note findOne(int id){
+		return this.noteRepository.findOne(id);
+	}
+	
+	public Note save(Note note){
+		Assert.notNull(note);
+		Assert.notNull(note.getTrip());
+		CheckByPrincipal(note);
+		return this.noteRepository.save(note);
+	}
+	
+	public void delete(Note note){
+		Assert.isTrue(note.getTrip().equals(null));
+		this.noteRepository.delete(note);
+	}
+	 
+	// Others business methods ----------------------------------------------------
+	
+	public Note ReplyToNote(int noteId,String reply){
+		Note note=noteRepository.findOne(noteId);
+		note.setReplyMoment(new Date(System.currentTimeMillis()-1000));
+		CheckByPrincipal(note);
+		note.setReply(reply);
+		save(note);
+		return note;
+	}
+	
+	public void CheckByPrincipal(Note note){
+		Manager principal = managerService.findByPrincipal();
+		Assert.isTrue(note.getTrip().getManager().equals(principal));
+		
+	}
+	
+	public Note AsignarNoteATrip(Note note,Trip trip){
+		note.setTrip(trip);
+		trip.getNotes().add(note);
+		//tripService.save(trip);
+		save(note);
+		return note;
+	}
+	
+	
+	
+  
+}

@@ -1,0 +1,20 @@
+folder.name					= Nombre
+
+folder.createFolder			= Crear Directorio
+folder.back					= Volver
+folder.move					= Mover 
+folder.moveTo				= Mover a
+folder.folders				= Directorios
+folder.messages				= Mensajes
+folder.save					= Guardar
+folder.delete				= Borrar
+
+folder.cancel				= Cancelar
+folder.selectionText		= Selecciona el directorio a donde quieres mover el mensaje.
+folder.editFolder			= Editar directorio
+folder.commit.error			= La operación no puede ser realizada. El nombre de la carpeta debe ser diferente a Inbox, Outbox, Trashbox o Spambox.
+folder.confirm.delete		= ¿Seguro que deseas eliminar este directorio?
+
+folder.createChildFolder	= Crear subcarpeta
+folder.viewChildren			= Ver subcarpetas
+folder.parentName			= Carpeta padre

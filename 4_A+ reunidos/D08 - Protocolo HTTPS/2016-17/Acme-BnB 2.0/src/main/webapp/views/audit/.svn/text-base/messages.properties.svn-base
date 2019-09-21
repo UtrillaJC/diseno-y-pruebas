@@ -1,0 +1,22 @@
+# messages.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+audit.moment = Moment
+audit.text = Text
+audit.attachments = Attachments
+audit.attachments.ph = URL separate by comma
+
+audit.back = Back
+
+audit.saveAsDraft = Draft
+audit.save = Save
+audit.cancel = Cancel
+audit.delete Delete
+audit.confirm.save = Are you sure you want to save this audit as final?
+
+audit.commit.error = Error

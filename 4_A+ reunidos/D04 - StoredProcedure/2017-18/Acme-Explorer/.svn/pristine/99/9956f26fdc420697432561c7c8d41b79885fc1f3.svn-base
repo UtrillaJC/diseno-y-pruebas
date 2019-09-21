@@ -1,0 +1,128 @@
+
+package services;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import repositories.CategoryRepository;
+import domain.Actor;
+import domain.Admin;
+import domain.Category;
+import domain.Trip;
+
+@Service
+@Transactional
+public class CategoryService {
+
+	// Managed repository -----------------------------------------------------
+
+	@Autowired
+	private CategoryRepository	categoryRepository;
+
+	// Supporting services ----------------------------------------------------
+
+	@Autowired
+	private ActorService		actorService;
+
+
+	// Constructors -----------------------------------------------------------
+
+	public CategoryService() {
+		super();
+	}
+
+	// Simple CRUD methods ----------------------------------------------------
+
+	public Category create(final Category category) {
+
+		final Actor principal = this.actorService.findByPrincipal();
+		final Collection<Trip> trips = new ArrayList<Trip>();
+
+		Assert.notNull(category);
+		Assert.isInstanceOf(Admin.class, principal);
+
+		final Category res = new Category();
+
+		res.setTrips(trips);
+		res.setParentCategory(category);
+
+		return res;
+	}
+
+	public Category findOne(final int categoryId) {
+
+		Assert.notNull(categoryId);
+		final Category res = this.categoryRepository.findOne(categoryId);
+		return res;
+
+	}
+
+	public Collection<Category> findAll() {
+
+		final Actor principal = this.actorService.findByPrincipal();
+
+		Assert.isInstanceOf(Admin.class, principal);
+
+		final Collection<Category> res = this.categoryRepository.findAll();
+		return res;
+
+	}
+
+	public Category save(final Category category) {
+
+		final Actor principal = this.actorService.findByPrincipal();
+
+		Assert.notNull(category);
+		Assert.isInstanceOf(Admin.class, principal);
+
+		Assert.isTrue(!category.getName().equals(category.getParentCategory().getName()));
+
+		final Category res = this.categoryRepository.save(category);
+		res.getParentCategory().getChildrenCategories().add(res);
+
+		return res;
+
+	}
+
+	public void delete(final Category category) {
+
+		final Actor principal = this.actorService.findByPrincipal();
+
+		Assert.notNull(category);
+		Assert.isInstanceOf(Admin.class, principal);
+
+		if (category.getChildrenCategories().isEmpty())
+			this.categoryRepository.delete(category);
+		else {
+			category.getChildrenCategories().clear();
+			this.categoryRepository.delete(category);
+		}
+
+	}
+
+	// Other business methods -------------------------------------------------
+
+	public Collection<Trip> findAllTripByCategoryID(final int categoryId) {
+
+		Assert.notNull(categoryId);
+
+		final Collection<Trip> res = this.categoryRepository.findAllTripByCategoryID(categoryId);
+		return res;
+
+	}
+
+	public Collection<Category> findCategoryChildrenID(final int categoryId) {
+
+		Assert.notNull(categoryId);
+
+		final Collection<Category> res = this.categoryRepository.findCategoryChildrenID(categoryId);
+		return res;
+
+	}
+
+}

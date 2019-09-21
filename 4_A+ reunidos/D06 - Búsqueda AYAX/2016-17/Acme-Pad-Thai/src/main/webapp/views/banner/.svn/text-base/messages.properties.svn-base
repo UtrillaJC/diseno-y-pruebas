@@ -1,0 +1,18 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+banner.description              = Description
+banner.maxNumDisplayed			= Max number displayed
+banner.numDisplayed				= Number displayed
+
+banner.campaign					= Campaign
+
+banner.save						= Save	
+banner.cancel					= Back   
+
+banner.commit.error				= Cannot commit this operation. The max number displayed must be greater or equal to number displayed.

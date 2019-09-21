@@ -1,0 +1,24 @@
+# messages_es.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+register.save 							= Registrar
+register.cancel 						= Cancelar
+register.commit.error					= Ha habido un error, contacte con su administrador
+register.username						= Nombre de usuario
+register.password						= Contraseña
+register.verify.password				= Verificar contraseña
+register.confirm						= Su registro fue completado correctamente
+register.duplicated.user				= Su nombre de usuario ya existe
+register.contract.accepted1 			= Estoy de acuerdo con
+register.contract.accepted2				= los términos y condiciones
+register.contract.accepted3				= de este sitio web.
+
+
+register.name							= Nombre
+register.phone							= Telefono
+register.email							= Correo electrónico

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/controllers/sponsor
+END
+BillSponsorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/controllers/sponsor/BillSponsorController.java
+END
+ProfileSponsorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/107/Acme-Pad-Thai/src/main/java/controllers/sponsor/ProfileSponsorController.java
+END
+CreditCardSponsorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/34/Acme-Pad-Thai/src/main/java/controllers/sponsor/CreditCardSponsorController.java
+END
+SocialIdentitySponsorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/107/Acme-Pad-Thai/src/main/java/controllers/sponsor/SocialIdentitySponsorController.java
+END
+BannerSponsorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/controllers/sponsor/BannerSponsorController.java
+END
+CampaignSponsorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/controllers/sponsor/CampaignSponsorController.java
+END
+RegisterSponsorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/34/Acme-Pad-Thai/src/main/java/controllers/sponsor/RegisterSponsorController.java
+END

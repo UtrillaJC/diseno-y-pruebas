@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/171/Acme-BnB/src/main/java/controllers/lessor
+END
+PropertyLessorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/153/Acme-BnB/src/main/java/controllers/lessor/PropertyLessorController.java
+END
+RequestLessorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/116/Acme-BnB/src/main/java/controllers/lessor/RequestLessorController.java
+END
+CommentLessorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/111/Acme-BnB/src/main/java/controllers/lessor/CommentLessorController.java
+END
+ValueAttributeLessorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/171/Acme-BnB/src/main/java/controllers/lessor/ValueAttributeLessorController.java
+END
+TenantLessorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/122/Acme-BnB/src/main/java/controllers/lessor/TenantLessorController.java
+END

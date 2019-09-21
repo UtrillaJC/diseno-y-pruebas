@@ -1,0 +1,92 @@
+
+package services;
+
+import javax.transaction.Transactional;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.Assert;
+
+import utilities.AbstractTest;
+import domain.Curriculum;
+import domain.EndorserRecord;
+import domain.Ranger;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {
+	"classpath:spring/datasource.xml", "classpath:spring/config/packages.xml"
+})
+@Transactional
+public class EndorserRecordServiceTest extends AbstractTest {
+
+	// Service under Test --------------------------------------------------
+
+	@Autowired
+	private EndorserRecordService	endorserRecordService;
+
+	@Autowired
+	private CurriculumService		curriculumService;
+
+	@Autowired
+	private RangerService			rangerService;
+
+
+	// Tests -----------------------------------------------------------------
+
+	@Test
+	public void testCreate() {
+		EndorserRecord endorserRecord = null;
+		Ranger ranger = null;
+
+		super.authenticate("ranger1");
+		ranger = this.rangerService.findByPrincipal();
+		endorserRecord = this.endorserRecordService.create();
+
+		Assert.notNull(endorserRecord.getComments());
+	}
+	@Test
+	public void testSave() {
+		EndorserRecord endorserRecord = null;
+		EndorserRecord saved = null;
+
+		Ranger ranger = null;
+
+		super.authenticate("ranger1");
+		ranger = this.rangerService.findByPrincipal();
+		endorserRecord = this.endorserRecordService.create();
+		endorserRecord.setEmail("endorsertest@gmail.com");
+		endorserRecord.setFullName("Endorser Test");
+		endorserRecord.setLink("http://www.endorser.com/test.html");
+		endorserRecord.setPhone("13649578");
+		saved = this.endorserRecordService.save(endorserRecord);
+
+		Assert.isTrue(this.endorserRecordService.findAll().contains(saved));
+	}
+
+	@Test
+	public void testDelete() {
+		EndorserRecord endorserRecord = null;
+		EndorserRecord saved = null;
+		Curriculum curriculum = null;
+		Ranger ranger = null;
+
+		super.authenticate("ranger1");
+		ranger = this.rangerService.findByPrincipal();
+		endorserRecord = this.endorserRecordService.create();
+		endorserRecord.setEmail("endorsertest@gmail.com");
+		endorserRecord.setFullName("Endorser Test");
+		endorserRecord.setLink("http://www.endorser.com/test.html");
+		endorserRecord.setPhone("+136 (237)");
+		saved = this.endorserRecordService.save(endorserRecord);
+		Assert.isTrue(this.endorserRecordService.findAll().contains(saved));
+		curriculum = this.curriculumService.findOne(7213);
+
+		this.endorserRecordService.delete(saved, curriculum);
+		Assert.isTrue(!this.endorserRecordService.findAll().contains(saved));
+
+	}
+
+}

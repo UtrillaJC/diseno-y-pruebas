@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+ *
+ * Copyright (C) 2013 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="service/listOffers" extends="master.page">	
+		<put-attribute name="title" value="List of Offers" />
+		<put-attribute name="body" value="/views/service/list.jsp" />
+	</definition>
+
+	<definition name="service/listMyOffers" extends="master.page">	
+		<put-attribute name="title" value="List of my Offers" />
+		<put-attribute name="body" value="/views/service/list.jsp" />
+	</definition>
+	
+	<definition name="service/listRequests" extends="master.page">	
+		<put-attribute name="title" value="List of Requests" />
+		<put-attribute name="body" value="/views/service/list.jsp" />
+	</definition>
+
+	<definition name="service/listMyRequests" extends="master.page">	
+		<put-attribute name="title" value="List of my Requests" />
+		<put-attribute name="body" value="/views/service/list.jsp" />
+	</definition>
+	
+	<definition name="service/customer/search" extends="master.page">	
+		<put-attribute name="title" value="Search requests and offers" />
+		<put-attribute name="body" value="/views/service/search.jsp" />
+	</definition>
+	
+	<definition name="service/customer/create" extends="master.page">	
+		<put-attribute name="title" value="Create offer or request" />
+		<put-attribute name="body" value="/views/service/customer/create.jsp" />
+	</definition>
+	
+	<definition name="service/administrator/list" extends="master.page">	
+		<put-attribute name="title" value="Services list" />
+		<put-attribute name="body" value="/views/service/list.jsp" />
+	</definition>
+	
+	<definition name="service/customer/listServicesApplicables" extends="master.page">	
+		<put-attribute name="title" value="Applicable services list" />
+		<put-attribute name="body" value="/views/service/applicable_list.jsp" />
+	</definition>
+
+	<definition name="service/customer/showCoordinates" extends="master.page">	
+		<put-attribute name="title" value="Coordinates" />
+		<put-attribute name="body" value="/views/service/customer/showCoordinates.jsp" />
+	</definition>		
+</tiles-definitions>

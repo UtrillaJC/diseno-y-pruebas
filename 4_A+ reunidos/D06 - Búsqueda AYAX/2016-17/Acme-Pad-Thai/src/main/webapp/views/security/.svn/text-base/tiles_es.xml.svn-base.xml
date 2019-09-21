@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2016 Universidad de Sevilla
+ *
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="security/login" extends="master.page">
+		<put-attribute name="title" value="Entrada en el sistema" />
+		<put-attribute name="body" value="/views/security/login.jsp" />
+	</definition>
+	
+	<definition name="security/registerUser" extends="master.page">
+		<put-attribute name="title" value="Registrar Usuario" />
+		<put-attribute name="body" value="/views/security/registerUser.jsp" />
+	</definition>
+	
+	<definition name="security/registerNutritionist" extends="master.page">
+		<put-attribute name="title" value="Registrar Nutricionista" />
+		<put-attribute name="body" value="/views/security/registerNutritionist.jsp" />
+	</definition>
+	
+	<definition name="security/registerSponsor" extends="master.page">
+		<put-attribute name="title" value="Registrar Patrocinador" />
+		<put-attribute name="body" value="/views/security/registerSponsor.jsp" />
+	</definition>
+	
+	<definition name="security/administrator/registerCook" extends="master.page">
+		<put-attribute name="title" value="Registrar Cocinero" />
+		<put-attribute name="body" value="/views/security/registerCook.jsp" />
+	</definition>
+	
+	<definition name="registration/registerToAttendMasterClass" extends="master.page">
+		<put-attribute name="title" value="Registrarse para asistir a Clases Maestras" />
+		<put-attribute name="body" value="/views/security/registerToAttendMasterClass.jsp" />
+	</definition>
+		
+</tiles-definitions>

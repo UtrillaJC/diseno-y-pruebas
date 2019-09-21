@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/121/Acme-Pad-Thai/src/main/webapp/views/user
+END
+messages_es.properties
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/109/Acme-Pad-Thai/src/main/webapp/views/user/messages_es.properties
+END
+search.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/20/Acme-Pad-Thai/src/main/webapp/views/user/search.jsp
+END
+tiles_es.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/109/Acme-Pad-Thai/src/main/webapp/views/user/tiles_es.xml
+END
+showUser.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/121/Acme-Pad-Thai/src/main/webapp/views/user/showUser.jsp
+END
+messages.properties
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/109/Acme-Pad-Thai/src/main/webapp/views/user/messages.properties
+END
+list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/8/Acme-Pad-Thai/src/main/webapp/views/user/list.jsp
+END
+editProfile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/109/Acme-Pad-Thai/src/main/webapp/views/user/editProfile.jsp
+END
+tiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/109/Acme-Pad-Thai/src/main/webapp/views/user/tiles.xml
+END
+editSocialIdentity.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/109/Acme-Pad-Thai/src/main/webapp/views/user/editSocialIdentity.jsp
+END

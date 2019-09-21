@@ -1,0 +1,23 @@
+# messages_es.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+explorer.name 					= Nombre
+explorer.surname				= Apellidos
+explorer.email					= Email
+explorer.address				= Dirección
+explorer.phone					= Número teléphoo
+explorer.username				= Nombre cuenta de usuario
+explorer.password				= Contraseña cuenta de usuario
+	
+explorer.commit.errorName		= El nombre no es correcto.
+explorer.commit.errorSurname	= Los apellidos no son correctos.
+explorer.commit.errorEmail		= El email no cumple el patrón.
+explorer.commit.errorAddress	= La dirección no es correcta.
+explorer.commit.errorPhone		= El teléphono no cumpe con el patrón.
+explorer.commit.errorUsername	= El nombre de usuario no es correcta.
+explorer.commit.errorPassword	= La contraseña no es correcta.

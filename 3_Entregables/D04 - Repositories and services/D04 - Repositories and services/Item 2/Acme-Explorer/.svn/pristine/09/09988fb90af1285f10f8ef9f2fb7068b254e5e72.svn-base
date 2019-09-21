@@ -1,0 +1,98 @@
+
+package services;
+
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import repositories.TagRepository;
+import domain.Manager;
+import domain.Tag;
+
+@Service
+@Transactional
+public class TagService {
+
+	// Managed repository -----------------------------------------------------
+
+	@Autowired
+	private TagRepository	tagRepository;
+
+	// Supporting services ----------------------------------------------------
+
+	@Autowired
+	private ManagerService	managerService;
+
+
+	// Constructors -----------------------------------------------------------
+
+	public TagService() {
+		super();
+	}
+
+	// Simple CRUD methods ----------------------------------------------------
+
+	public Tag create() {
+
+		final Manager principal = this.managerService.findByPrincipal();
+
+		Assert.isInstanceOf(Manager.class, principal);
+
+		final Tag res = new Tag();
+
+		return res;
+
+	}
+
+	public Tag findOne(final int tagId) {
+
+		Assert.notNull(tagId);
+		final Tag res = this.tagRepository.findOne(tagId);
+		return res;
+
+	}
+
+	public Collection<Tag> findAll() {
+
+		final Collection<Tag> res = this.tagRepository.findAll();
+		return res;
+
+	}
+
+	public Tag save(final Tag tag) {
+
+		final Manager principal = this.managerService.findByPrincipal();
+
+		Assert.notNull(tag);
+		Assert.isInstanceOf(Manager.class, principal);
+
+		final Tag res = this.tagRepository.save(tag);
+		return res;
+
+	}
+	public void delete(final Tag tag) {
+
+		this.tagRepository.delete(tag);
+
+	}
+
+	// Other business methods -------------------------------------------------
+
+	public Tag findToEdit(final Tag tag) {
+
+		Manager manager = null;
+		Tag res = null;
+
+		manager = this.managerService.findByPrincipal();
+		Assert.notNull(tag);
+		Assert.isInstanceOf(Manager.class, manager);
+		Assert.isTrue(tag.getHasValues().isEmpty());
+
+		res = this.save(tag);
+
+		return res;
+	}
+}

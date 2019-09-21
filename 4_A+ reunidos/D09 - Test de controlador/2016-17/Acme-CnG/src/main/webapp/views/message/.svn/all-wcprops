@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/124/Acme-CarNGo/src/main/webapp/views/message
+END
+messages_es.properties
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/84/Acme-CarNGo/src/main/webapp/views/message/messages_es.properties
+END
+tiles_es.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/84/Acme-CarNGo/src/main/webapp/views/message/tiles_es.xml
+END
+edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/80/Acme-CarNGo/src/main/webapp/views/message/edit.jsp
+END
+showMessage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/124/Acme-CarNGo/src/main/webapp/views/message/showMessage.jsp
+END
+messages.properties
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/84/Acme-CarNGo/src/main/webapp/views/message/messages.properties
+END
+list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/84/Acme-CarNGo/src/main/webapp/views/message/list.jsp
+END
+editReply.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/80/Acme-CarNGo/src/main/webapp/views/message/editReply.jsp
+END
+tiles.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/84/Acme-CarNGo/src/main/webapp/views/message/tiles.xml
+END

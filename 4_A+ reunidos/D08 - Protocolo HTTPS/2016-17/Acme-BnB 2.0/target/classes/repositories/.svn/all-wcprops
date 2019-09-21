@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/170/Acme-BnB/src/main/java/repositories
+END
+FinderRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/5/Acme-BnB/src/main/java/repositories/FinderRepository.java
+END
+CommentRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/96/Acme-BnB/src/main/java/repositories/CommentRepository.java
+END
+AuditorRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/19/Acme-BnB/src/main/java/repositories/AuditorRepository.java
+END
+AttributeRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/142/Acme-BnB/src/main/java/repositories/AttributeRepository.java
+END
+LessorRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/168/Acme-BnB/src/main/java/repositories/LessorRepository.java
+END
+AuditRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/138/Acme-BnB/src/main/java/repositories/AuditRepository.java
+END
+CommentClassRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/96/Acme-BnB/src/main/java/repositories/CommentClassRepository.java
+END
+ConfigurationRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/78/Acme-BnB/src/main/java/repositories/ConfigurationRepository.java
+END
+ActorRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/145/Acme-BnB/src/main/java/repositories/ActorRepository.java
+END
+PropertyRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/170/Acme-BnB/src/main/java/repositories/PropertyRepository.java
+END
+RequestRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/164/Acme-BnB/src/main/java/repositories/RequestRepository.java
+END
+AdministratorRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/13/Acme-BnB/src/main/java/repositories/AdministratorRepository.java
+END
+InvoiceRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/149/Acme-BnB/src/main/java/repositories/InvoiceRepository.java
+END
+ValueAttributeRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/133/Acme-BnB/src/main/java/repositories/ValueAttributeRepository.java
+END
+SocialIdentityRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/157/Acme-BnB/src/main/java/repositories/SocialIdentityRepository.java
+END
+TenantRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/168/Acme-BnB/src/main/java/repositories/TenantRepository.java
+END

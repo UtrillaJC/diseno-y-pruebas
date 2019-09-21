@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/80/Acme-CarNGo/src/main/webapp/WEB-INF/tags
+END
+submit.tag
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/webapp/WEB-INF/tags/submit.tag
+END
+cancel.tag
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/webapp/WEB-INF/tags/cancel.tag
+END
+textarea.tag
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/80/Acme-CarNGo/src/main/webapp/WEB-INF/tags/textarea.tag
+END
+password.tag
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/webapp/WEB-INF/tags/password.tag
+END
+select.tag
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/webapp/WEB-INF/tags/select.tag
+END
+textbox.tag
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/80/Acme-CarNGo/src/main/webapp/WEB-INF/tags/textbox.tag
+END
+button.tag
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/78/Acme-CarNGo/src/main/webapp/WEB-INF/tags/button.tag
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/controllers/administrator
+END
+ProfileAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/107/Acme-Pad-Thai/src/main/java/controllers/administrator/ProfileAdministratorController.java
+END
+RegisterCookAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/95/Acme-Pad-Thai/src/main/java/controllers/administrator/RegisterCookAdministratorController.java
+END
+SocialIdentityAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/107/Acme-Pad-Thai/src/main/java/controllers/administrator/SocialIdentityAdministratorController.java
+END
+CategoryAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/133/Acme-Pad-Thai/src/main/java/controllers/administrator/CategoryAdministratorController.java
+END
+CampaignAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/controllers/administrator/CampaignAdministratorController.java
+END
+ContestAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/controllers/administrator/ContestAdministratorController.java
+END
+DashboardAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/100/Acme-Pad-Thai/src/main/java/controllers/administrator/DashboardAdministratorController.java
+END
+SpamTermAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/105/Acme-Pad-Thai/src/main/java/controllers/administrator/SpamTermAdministratorController.java
+END
+FeeAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/105/Acme-Pad-Thai/src/main/java/controllers/administrator/FeeAdministratorController.java
+END
+MasterClassAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/102/Acme-Pad-Thai/src/main/java/controllers/administrator/MasterClassAdministratorController.java
+END
+BillAdministratorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/134/Acme-Pad-Thai/src/main/java/controllers/administrator/BillAdministratorController.java
+END

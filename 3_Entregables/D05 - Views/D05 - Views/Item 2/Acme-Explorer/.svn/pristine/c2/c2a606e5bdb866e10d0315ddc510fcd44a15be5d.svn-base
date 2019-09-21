@@ -1,0 +1,27 @@
+# messages.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+ranger.name 				= Name
+ranger.surname				= Surname
+ranger.email				= Email
+ranger.address				= Address
+ranger.phone				= Phone
+ranger.username				= UserName
+ranger.password				= Password
+	
+ranger.commit.errorName		= Name is wrong.
+ranger.commit.errorSurname	= Surname is wrong.
+ranger.commit.errorEmail	= Email pattern is wrong.
+ranger.commit.errorAddress	= Address is wrong.
+ranger.commit.errorPhone	= Phone pattern is wrong.
+ranger.commit.errorUsername	= Username is wrong.
+ranger.commit.errorPassword	= Password is wrong.
+
+
+
+

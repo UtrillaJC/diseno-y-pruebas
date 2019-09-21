@@ -1,0 +1,9 @@
+D11 - Acceptance testing
+
+En este entregable se nos pide la entrega del proyecto y de los test funcionales (JUnit) en items distintos. Debido a que ambas partes son indivisibles y que, según el documento "On Your Deliverables", los items deben ser independientes unos de otros, hemos decidido entregar el mismo contenido dos veces. Tanto Item 3 como Item 4, contienen el proyecto Acme-Newspaper.
+
+Siguiendo las indicaciones de Carlos Müller y como hicimos en la anterior entrega, los archivos referentes a HTTPS (proyecto, WAR e instrucciones de instalación) se incluirán en la carpeta "HTTPS". Los proyectos entregados en el resto de items corresponden con la versión en HTTP.
+
+Respecto a la versión anterior del proyecto hemos cambiado la interpretación que hacíamos sobre la visibilidad de los newspapers privados. En la versión 1.0, interpretamos que los newspapers privados sólo podían ser visualizados por los customer que ya se habían suscritos a ellos. Sin embargo, tras leer el requisito 8.1 del Acme-Newspaper 2.0 donde nos indican que los privados no pueden ser visualizados completamente por los actores no autenticados, entendimos que habíamos entendido mal los requisitos. En esta versión del proyecto, todos los actores pueden ver los newspaper privados, pero no pueden acceder a sus artículos.
+
+Respecto al tema de las subscripciones, nosotros distinguimos entre dos tipos: Individuales y grupales, llamadas NewspaperSubscription y VolumeSubscription. Un customer podrá suscribirse a cualquier newspaper privado que no posea previamente mediante una suscripcion individual. Por otro lado, con las suscripciones grupales, el usuario podrá suscribirse a un conjunto de newspapers, tanto públicos como privados.

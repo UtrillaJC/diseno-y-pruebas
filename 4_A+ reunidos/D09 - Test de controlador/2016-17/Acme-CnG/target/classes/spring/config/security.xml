@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * security.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"	
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd		
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+    ">
+
+	<!-- Security infrastructure -->
+
+	<bean id="loginService" class="security.LoginService" />
+
+	<bean id="passwordEncoder"
+		class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
+
+	<!-- Access control -->
+
+	<security:http auto-config="true" use-expressions="true">
+		<security:intercept-url pattern="/" access="permitAll" /> 
+
+		<security:intercept-url pattern="/favicon.ico" access="permitAll" /> 
+		<security:intercept-url pattern="/images/**" access="permitAll" /> 
+		<security:intercept-url pattern="/scripts/**" access="permitAll" /> 
+		<security:intercept-url pattern="/styles/**" access="permitAll" /> 
+
+		<security:intercept-url pattern="/views/misc/index.jsp" access="permitAll" /> 
+
+		<security:intercept-url pattern="/security/login.do" access="permitAll" /> 
+		<security:intercept-url pattern="/security/loginFailure.do" access="permitAll" /> 
+
+		<security:intercept-url pattern="/welcome/index.do" access="permitAll" /> 
+		
+		<security:intercept-url pattern="/comment/actor/list.do" access="isAuthenticated()" /> 
+		<security:intercept-url pattern="/comment/actor/create.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/message/actor/create.do" access="isAuthenticated()" />  
+		<security:intercept-url pattern="/message/actor/reply.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/message/actor/forward.do" access="isAuthenticated()" />    
+		<security:intercept-url pattern="/message/actor/listReceivedMessages.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/message/actor/showMessage.do" access="isAuthenticated()" />  
+  
+		<security:intercept-url pattern="/message/actor/listSendMessages.do" access="isAuthenticated()" />  
+		<security:intercept-url pattern="/actor/actor/list.do" access="isAuthenticated()" />  
+		
+		<security:intercept-url pattern="/dashboard/administrator/list.do" access="hasRole('ADMINISTRATOR')" /> 
+		
+		<security:intercept-url pattern="/banner/administrator/edit.do" access="hasRole('ADMINISTRATOR')" /> 
+		<security:intercept-url pattern="/banner/administrator/showBanner.do" access="hasRole('ADMINISTRATOR')" /> 
+		
+		<security:intercept-url pattern="/comment/administrator/listAllComments.do" access="hasRole('ADMINISTRATOR')" /> 
+		<security:intercept-url pattern="/comment/administrator/banComment.do" access="hasRole('ADMINISTRATOR')" /> 
+		
+		<security:intercept-url pattern="/service/customer/listOffers.do" access="hasRole('CUSTOMER')" /> 
+		<security:intercept-url pattern="/service/customer/listMyOffers.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/service/customer/listOffersByNotCustomer.do" access="hasRole('CUSTOMER')" /> 
+		<security:intercept-url pattern="/service/customer/create.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/service/customer/showCoordinates.do" access="hasRole('CUSTOMER')" /> 
+
+		<security:intercept-url pattern="/service/customer/listRequests.do" access="hasRole('CUSTOMER')" /> 
+		<security:intercept-url pattern="/service/customer/listMyRequests.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/service/customer/listRequestsByNotCustomer.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/service/customer/searchForm.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/service/customer/search.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/application/customer/listApplicationsJoin.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/application/customer/listMyApplications.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/application/customer/listApplicationNotOwn.do" access="hasRole('CUSTOMER')" />
+		
+		<security:intercept-url pattern="/application/customer/accept.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/application/customer/deny.do" access="hasRole('CUSTOMER')" />
+		<security:intercept-url pattern="/service/administrator/list.do" access="hasRole('ADMINISTRATOR')" />
+		<security:intercept-url pattern="/service/administrator/ban.do" access="hasRole('ADMINISTRATOR')" />
+		
+		<security:intercept-url pattern="/application/customer/create.do" access="hasRole('CUSTOMER')" />
+		
+		
+		
+		<security:intercept-url pattern="/service/customer/listServicesApplicables.do" access="hasRole('CUSTOMER')" />
+		
+		<security:intercept-url pattern="/terms/show.do" access="permitAll" />
+
+		<security:intercept-url pattern="/customer/register.do" access="isAnonymous()" /> 
+	
+		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
+
+		<security:form-login 
+			login-page="/security/login.do"
+			password-parameter="password" 
+			username-parameter="username"
+			authentication-failure-url="/security/loginFailure.do" />
+
+		<security:logout 
+			logout-success-url="/" 
+			invalidate-session="true" />
+	</security:http>
+
+</beans>

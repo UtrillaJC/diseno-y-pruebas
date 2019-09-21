@@ -1,0 +1,21 @@
+message.name				= Nombre
+message.sender				= Remitente
+message.receiver			= Destinatario
+message.subject				= Asunto
+message.body				= Cuerpo
+message.priority			= Prioridad
+message.date				= Fecha
+message.selectReceiver		= Selecciona destinatario
+
+message.to					= Para
+message.from				= De
+message.send				= Enviar
+message.cancel				= Cancelar
+message.delete				= Borrar
+message.confirm.delete		= ¿Está seguro de que quiere borrar este mensaje?
+message.reply				= Responder
+message.back				= Volver
+
+message.commit.error		= No se puede realizar esta operación.
+message.move.error			= No se puede mover el mensaje al directorio especificado, inténtalo de nuevo más tarde.
+domain.Message@0			=   

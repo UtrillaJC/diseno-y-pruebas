@@ -1,0 +1,158 @@
+
+package services;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import repositories.CategoryRepository;
+import security.Authority;
+import domain.Actor;
+import domain.Admin;
+import domain.Category;
+import domain.Trip;
+
+@Service
+@Transactional
+public class CategoryService {
+
+	// Managed repository -----------------------------------------------------
+
+	@Autowired
+	private CategoryRepository	categoryRepository;
+
+	// Supporting services ----------------------------------------------------
+
+	@Autowired
+	private AdminService		adminService;
+
+	@Autowired
+	private ActorService		actorService;
+
+
+	// Constructors -----------------------------------------------------------
+
+	public CategoryService() {
+		super();
+	}
+
+	// Simple CRUD methods ----------------------------------------------------
+
+	public Category create() {
+
+		Collection<Trip> trips = null;
+		Collection<Category> children = null;
+		Category res = null;
+
+		children = new ArrayList<Category>();
+		trips = new ArrayList<Trip>();
+
+		res = new Category();
+
+		res.setTrips(trips);
+		res.setChildrenCategories(children);
+
+		return res;
+	}
+
+	public Category findOne(final int categoryId) {
+
+		Assert.notNull(categoryId);
+		final Category res = this.categoryRepository.findOne(categoryId);
+		return res;
+
+	}
+
+	public Collection<Category> findAll() {
+
+		Admin admin = null;
+
+		admin = this.adminService.findByPrincipal();
+		final Collection<Authority> authorities = admin.getUserAccount().getAuthorities();
+		final String authority = authorities.toArray()[0].toString();
+
+		Assert.isTrue((authority.equals("ADMIN")));
+
+		final Collection<Category> res = this.categoryRepository.findAll();
+		return res;
+
+	}
+
+	public Category save(final Category category) {
+		Actor actor = null;
+
+		actor = this.actorService.findByPrincipal();
+		final Collection<Authority> test = actor.getUserAccount().getAuthorities();
+		final String authority = test.toArray()[0].toString();
+
+		Assert.isTrue(authority.equals("MANAGER") || authority.equals("ADMIN"));
+
+		final Category res = this.categoryRepository.save(category);
+		res.getParentCategory().getChildrenCategories().add(res);
+
+		return res;
+
+	}
+
+	public void delete(final Category category) {
+
+		Admin admin = null;
+
+		admin = this.adminService.findByPrincipal();
+		final Collection<Authority> authorities = admin.getUserAccount().getAuthorities();
+		final String authority = authorities.toArray()[0].toString();
+
+		Assert.isTrue((authority.equals("ADMIN")));
+
+		Assert.notNull(category);
+
+		if (category.getChildrenCategories().isEmpty())
+			this.categoryRepository.delete(category);
+		else {
+			category.getChildrenCategories().clear();
+			this.categoryRepository.delete(category);
+		}
+
+	}
+
+	// Other business methods -------------------------------------------------
+
+	public Collection<Trip> findAllTripByCategoryID(final int categoryId) {
+
+		Admin admin = null;
+
+		admin = this.adminService.findByPrincipal();
+		final Collection<Authority> authorities = admin.getUserAccount().getAuthorities();
+		final String authority = authorities.toArray()[0].toString();
+
+		Assert.isTrue((authority.equals("ADMIN")));
+
+		Assert.notNull(categoryId);
+
+		final Collection<Trip> res = this.categoryRepository.findAllTripByCategoryID(categoryId);
+		return res;
+
+	}
+
+	public Collection<Category> findCategoryChildrenID(final int categoryId) {
+
+		Admin admin = null;
+
+		admin = this.adminService.findByPrincipal();
+		final Collection<Authority> authorities = admin.getUserAccount().getAuthorities();
+		final String authority = authorities.toArray()[0].toString();
+
+		Assert.isTrue((authority.equals("ADMIN")));
+
+		Assert.notNull(categoryId);
+
+		final Collection<Category> res = this.categoryRepository.findCategoryChildrenID(categoryId);
+		return res;
+
+	}
+
+}

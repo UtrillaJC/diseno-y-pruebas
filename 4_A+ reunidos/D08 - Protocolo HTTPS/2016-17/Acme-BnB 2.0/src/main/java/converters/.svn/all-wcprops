@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/96/Acme-BnB/src/main/java/converters
+END
+StringToAttributeConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToAttributeConverter.java
+END
+StringToCommentConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToCommentConverter.java
+END
+StringToUserAccountConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/55/Acme-BnB/src/main/java/converters/StringToUserAccountConverter.java
+END
+SocialIdentityToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/SocialIdentityToStringConverter.java
+END
+StringToSocialIdentityConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToSocialIdentityConverter.java
+END
+AdministratorToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/AdministratorToStringConverter.java
+END
+RequestToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/RequestToStringConverter.java
+END
+StringToPropertyConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToPropertyConverter.java
+END
+PropertyToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/PropertyToStringConverter.java
+END
+StringToInvoiceConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToInvoiceConverter.java
+END
+CommentClassToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/96/Acme-BnB/src/main/java/converters/CommentClassToStringConverter.java
+END
+StringToCommentClassConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/96/Acme-BnB/src/main/java/converters/StringToCommentClassConverter.java
+END
+AuditToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/AuditToStringConverter.java
+END
+AttributeToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/AttributeToStringConverter.java
+END
+StringToActorConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/28/Acme-BnB/src/main/java/converters/StringToActorConverter.java
+END
+StringToConfigurationConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/78/Acme-BnB/src/main/java/converters/StringToConfigurationConverter.java
+END
+CommentToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/CommentToStringConverter.java
+END
+UserAccountToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/55/Acme-BnB/src/main/java/converters/UserAccountToStringConverter.java
+END
+FinderToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/FinderToStringConverter.java
+END
+StringToFinderConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToFinderConverter.java
+END
+StringToAuditorConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToAuditorConverter.java
+END
+StringToCreditCardConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/56/Acme-BnB/src/main/java/converters/StringToCreditCardConverter.java
+END
+CreditCardToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/19/Acme-BnB/src/main/java/converters/CreditCardToStringConverter.java
+END
+StringToTenantConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToTenantConverter.java
+END
+TenantToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/TenantToStringConverter.java
+END
+ValueAttributeToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/ValueAttributeToStringConverter.java
+END
+StringToValueAttributeConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToValueAttributeConverter.java
+END
+InvoiceToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/InvoiceToStringConverter.java
+END
+StringToAdministratorConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToAdministratorConverter.java
+END
+ActorToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/28/Acme-BnB/src/main/java/converters/ActorToStringConverter.java
+END
+ConfigurationToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/78/Acme-BnB/src/main/java/converters/ConfigurationToStringConverter.java
+END
+StringToRequestConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToRequestConverter.java
+END
+LessorToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/LessorToStringConverter.java
+END
+StringToLessorConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToLessorConverter.java
+END
+AuditorToStringConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/AuditorToStringConverter.java
+END
+StringToAuditConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/w9qlhnpm327hqfyaqx9/!svn/ver/14/Acme-BnB/src/main/java/converters/StringToAuditConverter.java
+END

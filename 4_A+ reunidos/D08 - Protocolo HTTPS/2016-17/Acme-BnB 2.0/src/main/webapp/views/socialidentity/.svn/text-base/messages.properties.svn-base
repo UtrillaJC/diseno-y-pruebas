@@ -1,0 +1,12 @@
+socialIdentity.nick = Nick
+socialidentity.profile = Profile
+socialidentity.socialnetworkname = Social NetWork Name
+socialidentity.delete = Delete
+socialidentity.create = New social identity
+socialidentity.save = Save
+socialidentity.cancel = Cancel
+socialidentity.submit = Send
+socialidentity.error = There can be no blank field
+si.delete.message = Are you sure delete this social identity?
+confirm.yes = Yes
+confirm.no = No

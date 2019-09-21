@@ -1,0 +1,25 @@
+# messages.properties
+#
+# Copyright (C) 2013 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+
+comment.author = Author
+comment.createdMoment = Moment
+comment.title = Title
+comment.text = Text
+comment.stars = Stars
+comment.receiver = Receiver
+comment.return.link = Return
+
+comment.save = Save
+comment.cancel = Cancel
+
+comment.commit.error = Cannot commit the operation
+
+
+comment.ban	= Ban
+comment.banned = BANNED!

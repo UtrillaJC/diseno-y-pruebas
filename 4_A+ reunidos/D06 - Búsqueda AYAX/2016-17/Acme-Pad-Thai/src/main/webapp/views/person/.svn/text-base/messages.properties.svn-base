@@ -1,0 +1,20 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+person.name						= Name
+person.surname					= Surname
+person.email					= Email
+
+person.back						= Back
+
+person.follow					= Follow
+person.unfollow					= Unfollow
+person.confirm.unfollow			= Unfollow from this person?
+
+person.commit.error				= Can't complete your action
+person.commit.ok				= Action sucessfully completed

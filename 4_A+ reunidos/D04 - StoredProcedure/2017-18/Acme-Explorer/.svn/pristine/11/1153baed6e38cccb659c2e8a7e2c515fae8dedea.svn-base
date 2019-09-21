@@ -1,0 +1,65 @@
+
+package services;
+
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+import repositories.SponsorshipRepository;
+import domain.Sponsor;
+import domain.Sponsorship;
+
+@Service
+@Transactional
+public class SponsorshipService {
+
+	// Managed Repository -------------------------------------------------------
+
+	@Autowired
+	private SponsorshipRepository	sponsorshipRepository;
+
+
+	// Simple CRUD methods -------------------------------------------------------
+
+	public Sponsorship create(final Sponsor sponsor) {
+		final Sponsorship sponsorship = new Sponsorship();
+		sponsorship.setSponsor(sponsor);
+		return sponsorship;
+	}
+
+	public Collection<Sponsorship> findAll() {
+		return this.sponsorshipRepository.findAll();
+	}
+
+	public Sponsorship findOne(final int id) {
+		return this.sponsorshipRepository.findOne(id);
+	}
+
+	public Sponsorship save(final Sponsorship sponsorship) {
+		Assert.notNull(sponsorship);
+		return this.sponsorshipRepository.save(sponsorship);
+	}
+
+	public void delete(final Sponsorship sponsorship) {
+		this.sponsorshipRepository.delete(sponsorship);
+	}
+
+	// Other business methods -------------------------------------------------
+
+	public void deleteBySponsor(final Sponsor sponsor) {
+
+		final Collection<Sponsorship> sponsorships = this.findBySponsor(sponsor);
+		this.sponsorshipRepository.delete(sponsorships);
+	}
+
+	public Collection<Sponsorship> findBySponsor(final Sponsor sponsor) {
+
+		Collection<Sponsorship> result = null;
+		result = this.sponsorshipRepository.findBySponsor(sponsor);
+		return result;
+	}
+
+}

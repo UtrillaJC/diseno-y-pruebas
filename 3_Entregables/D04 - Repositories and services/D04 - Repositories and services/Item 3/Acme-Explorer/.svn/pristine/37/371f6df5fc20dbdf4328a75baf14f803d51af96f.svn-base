@@ -1,0 +1,173 @@
+
+package services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.Assert;
+
+import utilities.AbstractTest;
+import domain.Application;
+import domain.CreditCard;
+import domain.Explorer;
+import domain.Folder;
+import domain.Status;
+import domain.Trip;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {
+	"classpath:spring/datasource.xml", "classpath:spring/config/packages.xml"
+})
+@Transactional
+public class ApplicationServiceTest extends AbstractTest {
+
+	// Service under test ---------------------------------
+
+	@Autowired
+	private ApplicationService	applicationService;
+
+	@Autowired
+	private ExplorerService		explorerService;
+
+	@Autowired
+	private TripService			tripService;
+
+
+	@Test
+	public void testCreate() {
+		Application application;
+
+		super.authenticate("explorer1");
+		final Explorer explorer = this.explorerService.findByPrincipal();
+		application = this.applicationService.create(explorer);
+
+		Assert.notNull(application.getApplicant());
+		Assert.notNull(application.getMoment());
+		Assert.isTrue(application.getStatus().equals(Status.PENDING));
+		super.unauthenticate();
+	}
+
+	@Test
+	public void testSave() {
+		Application application, saved;
+		String coment;
+		final List<String> comments = new ArrayList<>();
+
+		super.authenticate("explorer1");
+
+		final Explorer explorer = this.explorerService.findByPrincipal();
+		application = this.applicationService.create(explorer);
+		coment = "First comment";
+		comments.add(coment);
+		application.setComments(comments);
+		final Trip trip = this.tripService.findOne(7278);
+		application.setTrip(trip);
+		saved = this.applicationService.save(application);
+
+		Assert.isTrue(this.applicationService.findAll().contains(saved));
+		super.unauthenticate();
+	}
+
+	@Test
+	public void testDelete() {
+		Application application, saved;
+		String coment;
+		final List<String> comments = new ArrayList<>();
+
+		super.authenticate("explorer1");
+
+		final Explorer explorer = this.explorerService.findByPrincipal();
+		application = this.applicationService.create(explorer);
+		coment = "First comment";
+		comments.add(coment);
+		application.setComments(comments);
+		final Trip trip = this.tripService.findOne(7151);
+		application.setTrip(trip);
+		saved = this.applicationService.save(application);
+		this.applicationService.delete(saved);
+
+		Assert.isTrue(!this.applicationService.findAll().contains(saved));
+		super.unauthenticate();
+	}
+	@Test
+	public void testApplyForTrip() {
+		Application application;
+		String coment;
+		final List<String> comments = new ArrayList<>();
+
+		super.authenticate("explorer1");
+		final Explorer explorer = this.explorerService.findByPrincipal();
+		final Trip trip = this.tripService.findOne(7279);
+		application = this.applicationService.create(explorer);
+		coment = "First comment";
+		comments.add(coment);
+		application.setComments(comments);
+		final Application test = this.applicationService.applyForTrip(trip, application);
+
+		Assert.isTrue(this.tripService.findOne(trip.getId()).getApplications().contains(application));
+		Assert.isTrue(explorer.getApplications().contains(application));
+		Assert.isTrue(this.applicationService.findAll().contains(test));
+	}
+	@Test
+	public void testCancelApplicationWithNotification() {
+		Application application;
+		Folder notificationbox = null;
+
+		super.authenticate("explorer1");
+		final Explorer explorer = this.explorerService.findByPrincipal();
+		application = this.applicationService.findOne(7349);
+		notificationbox = new ArrayList<Folder>(explorer.getFolders()).get(2);
+		final Integer tam = notificationbox.getMessages().size();
+
+		this.applicationService.cancelApplication(application);
+		Assert.isTrue(application.getStatus().equals(Status.CANCELLED));
+		Assert.isTrue(this.applicationService.findApplicationsByExplorerId(explorer.getId()).contains(application));
+
+		Assert.isTrue(notificationbox.getMessages().size() > tam);
+	}
+
+	@Test
+	public void testDueApplication() {
+		Application application = null;
+		Trip trip = null;
+
+		super.authenticate("manager1");
+		application = this.applicationService.findOne(7352);
+		trip = this.tripService.findOne(7282);
+		this.applicationService.dueApplication(application);
+
+		Assert.isTrue(application.getStatus().equals(Status.DUE));
+
+	}
+	@Test
+	public void testAcceptApplication() {
+		Application application = null;
+		Trip trip = null;
+		CreditCard creditCard = null;
+
+		super.authenticate("explorer2");
+		application = this.applicationService.findOne(7359);
+		trip = this.tripService.findOne(7278);
+
+		creditCard = new CreditCard();
+		creditCard.setBrand("VISA");
+		creditCard.setCvv(612);
+		creditCard.setExpirationMonth(5);
+		creditCard.setExpirationYear(2022);
+		creditCard.setHolder("Holder1");
+		creditCard.setNumber("4539009782278447");
+
+		this.applicationService.acceptApplication(application, creditCard);
+
+		Assert.isTrue(application.getStatus().equals(Status.ACCEPTED));
+
+	}
+
+}

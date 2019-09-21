@@ -1,0 +1,132 @@
+package services;
+
+
+
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.Assert;
+
+
+import domain.Auditor;
+import domain.Note;
+import domain.Trip;
+
+import utilities.AbstractTest;
+
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:spring/datasource.xml","classpath:spring/config/packages.xml"})
+
+@Transactional
+public class NoteServiceTest extends AbstractTest{
+	
+	// Service under test ---------------------------------------
+	
+	@Autowired
+	private AuditorService auditorService;
+	
+	@Autowired
+	private NoteService noteService;
+	
+	@Autowired
+	private TripService tripService;
+	
+	// Tests ----------------------------------------------------
+	
+	@Test
+	public void TestCreate(){
+		super.authenticate("auditor1");
+		//Auditor a = auditorService.findByPrincipal();
+		Note note= noteService.create();
+		Assert.notNull(note.getMoment());
+		Assert.notNull(note);
+		//Assert.notNull(note.getRemark());
+		//Assert.notNull(note.getReply());
+		//Assert.notNull(note.getTrip());
+		//Assert.notNull(note.getReplyMoment());
+		super.unauthenticate();
+	}
+	
+	@Test
+	public void testSave(){
+		 Note note,saved;
+		 Trip trip;
+		 
+		 super.authenticate("auditor1");
+		 
+		 note = noteService.create();
+		 note.setRemark("remark10");
+		 trip=tripService.findOne(7151);
+		 note.setTrip(trip);
+		 //trips.add(trip);
+		 note.setReply("replay10");
+		 saved=noteService.save(note);
+		 trip.getNotes().add(note);
+		 Assert.isTrue(noteService.findAll().contains(saved));
+		 super.unauthenticate();
+		 
+	}
+	
+	/*@Test
+	public void testDelete(){
+		 Note note,saved;
+		 Trip trip;
+		 
+		 super.authenticate("auditor1");
+		 Auditor a= auditorService.findByPrincipal();
+		 note = noteService.create(a);
+		 note.setRemark("remark10");
+		 trip=tripService.findOne(7151);
+		 note.setTrip(trip);
+		 note.setReply("reply10");
+		 saved=noteService.save(note);
+		 noteService.delete(saved);
+		 Assert.isTrue(!noteService.findAll().contains(note));
+		 super.unauthenticate();
+	}*/
+	
+	@Test
+	public void testReplyToNote(){
+		String reply;
+		Note note,saved;
+		 Trip trip;
+		 
+		 super.authenticate("auditor1");
+		 Auditor a= auditorService.findByPrincipal();
+		 note = noteService.create();
+		 note.setRemark("remark10");
+		 trip=tripService.findOne(7151);
+		 note.setTrip(trip);
+		 reply="reply10";
+		 note.setReply("reply10");
+		 saved=noteService.save(note);
+		 Assert.isTrue(note.getReply().equals(reply));
+		 super.unauthenticate(); 
+	}
+	
+	@Test
+	public void testAssignNoteToTrip(){
+		 Note note,saved;
+		 Trip trip;
+		 
+		 super.authenticate("auditor1");
+		 
+		 trip=tripService.findOne(7151);
+
+		 note = noteService.create();
+		 note.setRemark("remark10");
+		 note.setReply("replay10");
+		  saved = noteService.assignNoteToTrip(note, trip);
+		 
+		 Assert.isTrue(trip.getNotes().contains(saved));
+		 Assert.isTrue(saved.getTrip().equals(trip));
+		 super.unauthenticate();
+		
+	}
+
+}

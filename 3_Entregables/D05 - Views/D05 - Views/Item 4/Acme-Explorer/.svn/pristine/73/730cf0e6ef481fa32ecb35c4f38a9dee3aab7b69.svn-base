@@ -1,0 +1,100 @@
+
+package services;
+
+import javax.transaction.Transactional;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.Assert;
+
+import utilities.AbstractTest;
+import domain.Curriculum;
+import domain.Ranger;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {
+	"classpath:spring/datasource.xml", "classpath:spring/config/packages.xml"
+})
+@Transactional
+public class CurriculumServiceTest extends AbstractTest {
+
+	// Service under test ---------------------------------
+
+	@Autowired
+	private CurriculumService	curriculumService;
+
+	@Autowired
+	private RangerService		rangerService;
+
+
+	// Tests ----------------------------------------------
+
+	@Test
+	public void testCreate() {
+
+		Curriculum curriculum;
+
+		super.authenticate("ranger1");
+		curriculum = this.curriculumService.create(this.rangerService.findByPrincipal());
+		Assert.notNull(curriculum.getTicker());
+		Assert.notNull(curriculum.getRanger());
+		Assert.notNull(curriculum.getEducationRecords());
+		Assert.notNull(curriculum.getEndorserRecords());
+		Assert.notNull(curriculum.getMiscellaneousRecords());
+		Assert.notNull(curriculum.getProfessionalRecords());
+		Assert.notNull(curriculum.getPersonalRecord());
+		super.authenticate(null);
+	}
+
+	@Test
+	public void testSave() {
+
+		Curriculum curriculum, saved;
+
+		super.authenticate("ranger1");
+		curriculum = this.curriculumService.create(this.rangerService.findByPrincipal());
+		curriculum.getPersonalRecord().setFullName("Personal Record FullName");
+		curriculum.getPersonalRecord().setPhone("+34 4444");
+		curriculum.getPersonalRecord().setEmail("test@gmail.com");
+		curriculum.getPersonalRecord().setPhoto("http://www.photo.com/");
+		curriculum.getPersonalRecord().setLink("http://www.linkedin.com/");
+		saved = this.curriculumService.save(curriculum);
+		final Curriculum curriculumRetrieved = this.curriculumService.findOne(saved.getId());
+		Assert.notNull(curriculumRetrieved);
+		super.authenticate(null);
+	}
+
+	@Test
+	public void testDelete() {
+
+		Curriculum curriculum, saved;
+
+		super.authenticate("ranger1");
+		curriculum = this.curriculumService.create(this.rangerService.findByPrincipal());
+		curriculum.getPersonalRecord().setFullName("Personal Record FullName");
+		curriculum.getPersonalRecord().setPhone("+34 4444");
+		curriculum.getPersonalRecord().setEmail("test@gmail.com");
+		curriculum.getPersonalRecord().setPhoto("http://www.photo.com/");
+		curriculum.getPersonalRecord().setLink("http://www.linkedin.com/");
+		saved = this.curriculumService.save(curriculum);
+		this.curriculumService.delete(saved);
+		final Curriculum curriculumRetrieved = this.curriculumService.findOne(saved.getId());
+		Assert.isNull(curriculumRetrieved);
+		super.authenticate(null);
+	}
+
+	@Test
+	public void testFindByPrincipal() {
+
+		final Curriculum curriculum;
+
+		super.authenticate("ranger1");
+		final Ranger ranger = this.rangerService.findByPrincipal();
+		curriculum = this.curriculumService.findByPrincipal();
+		Assert.isTrue(curriculum.getRanger() == ranger);
+		super.authenticate(null);
+	}
+}

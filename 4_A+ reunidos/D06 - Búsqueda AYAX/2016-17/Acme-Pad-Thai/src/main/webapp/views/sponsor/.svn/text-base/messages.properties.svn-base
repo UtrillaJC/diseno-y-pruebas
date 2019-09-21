@@ -1,0 +1,36 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+sponsor.name					= Name
+sponsor.surname				= Surname
+sponsor.email					= Email
+sponsor.phoneNumber			= Phone Number
+sponsor.address				= Address
+socialIdentity.link			= Link
+socialIdentity.name			= Name
+socialIdentity.nick			= Nick
+socialIdentity.picture		= Picture
+
+user.showUser				= User Profile
+user.listRecipes			= Recipes
+
+user.search					= Search
+user.searchText				= It introduces the name of a user.
+
+sponsor.back					= Back
+
+sponsor.save					= Save	
+sponsor.cancel					= Cancel
+socialIdentity.create		= Create Social Identity 
+
+
+sponsor.commit.error			= Can't complete your action
+sponsor.informationData		= Personal Data
+sponsor.socialIdentity			= Social identity data
+
+

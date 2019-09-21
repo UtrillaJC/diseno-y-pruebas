@@ -1,0 +1,111 @@
+# messages_es.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+master.page.administrator							= Administrador
+
+master.page.profile 								= Perfil
+
+master.page.login 									= Entrar
+master.page.editProfile								= Editar perfil
+master.page.editSocialIdentityActor					= Editar Identidad Social
+master.page.logout 									= Salir
+
+master.page.registration							= Registrar
+master.page.registerUser							= Usuario
+master.page.registerNutritionist					= Nutricionista
+master.page.registerSponsor							= Patrocinador
+
+master.page.adminRegisterCook						= Registrar cocinero	
+
+master.page.recipe									= Receta
+master.page.recipeSearch							= Buscar
+master.page.recipeList								= Listar recetas
+master.page.myRecipes								= Mis recetas
+
+master.page.recipeList								= Listar recetas
+	
+master.page.fee										= Cuota
+master.page.modifyFee								= Modificar cuota
+
+master.page.modifySpamTerm							= Modificar palabras spam
+master.page.spamTerm								= Palabras spam
+	
+master.page.user									= Usuario
+master.page.userSearch								= Buscar
+master.page.userList								= Listar usuarios
+
+master.page.masterClass								= Clase maestra
+master.page.masterClassList							= Listar clases maestras
+master.page.masterClassListPromoted                    = Clases maestras promocionadas
+master.page.masterClassListDemoted                    = Clases maestras no promocionadas
+master.page.myMasterClasses							= Mis clases maestras
+master.page.user.list.registered.masterClasses		= Mis clases maestras
+master.page.user.list.not.registered.masterClasses	= Nuevas clases maestras
+
+master.page.creditCard								= Tarjeta de Crédito
+master.page.viewCreditCard							= Ver tarjeta de crédito
+master.page.editCreditCard							= Editar tarjeta de crédito
+
+master.page.contest									= Concurso
+master.page.contestList								= Listar concursos
+master.page.contestActive							= Concursos activos
+master.page.contest.create							= Crear concurso
+master.page.contest.finished						= Concursos finalizados
+	
+master.page.registrations							= Registros en concursos
+
+master.page.banner					 				= Bandera
+master.page.listBannerStarredCampaign 				= Listar Banderas
+	
+master.page.bill									= Factura
+master.page.bill.unpaid								= Facturas impagadas
+master.page.bill.paid								= Facturas pagadas
+
+master.page.campaign								= Campaña
+master.page.campaignList							= Listar campañas
+master.page.campaignListFinished					= Campañas finalizadas
+
+master.page.mailbox									= Correo
+
+master.page.listCurriculum							= Mis curriculums
+
+master.page.property								= Propiedad
+master.page.propertyList							= Listar propiedades
+
+master.page.ingredient								= Ingrediente
+master.page.ingredientList							= Listar ingredientes
+
+master.page.person									= Seguir
+master.page.followings								= Siguiendo
+master.page.not.followings							= No siguiendo
+
+master.page.bill									= Facturas
+master.page.billUnPaidList							= Facturas impagadas
+master.page.not.followings							= No siguiendo
+
+master.page.taste									= Gustos
+master.page.recipeWithoutTaste						= Recetas sin likes y dislikes
+master.page.recipeLikes								= Recetas que me gustan
+master.page.recipeDislikes							= Recetas que no me gustan
+master.page.recipesFollow							= Ultimas recetas creadas por usuarios que sigo
+
+master.page.administrator.dashboard					= Panel de Control
+master.page.administrator.dashboardRecipe			= Panel de Control Recetas
+master.page.administrator.dashboardUser				= Panel de Control Usuarios
+master.page.administrator.dashboardBill				= Panel de Control Facturas
+master.page.administrator.dashboardContest			= Panel de Control Concursos
+master.page.administrator.dashboardMasterClass		= Panel de Control Clases Maestras
+master.page.administrator.dashboardSponsor			= Panel de Control Patrocinadores
+master.page.administrator.dashboardStepToCook		= Panel de Control Pasos para Cocinar
+master.page.administrator.dashboardIngredient		= Panel de Control Ingredientes
+master.page.administrator.dashboardLearningMaterial	= Panel de Control Materiales de aprendizaje
+master.page.administrator.dashboardCampaign			= Panel de Control Campañas
+
+master.page.category								= Categoria
+master.page.category.list							= Lista de categorías
+master.page.category.create							= Crear categoría

@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/repositories
+END
+FeeRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/FeeRepository.java
+END
+LearningMaterialRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/71/Acme-Pad-Thai/src/main/java/repositories/LearningMaterialRepository.java
+END
+IngredientLineRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/90/Acme-Pad-Thai/src/main/java/repositories/IngredientLineRepository.java
+END
+CommentRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/128/Acme-Pad-Thai/src/main/java/repositories/CommentRepository.java
+END
+CategoryRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/119/Acme-Pad-Thai/src/main/java/repositories/CategoryRepository.java
+END
+TasteRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/12/Acme-Pad-Thai/src/main/java/repositories/TasteRepository.java
+END
+MasterClassRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/102/Acme-Pad-Thai/src/main/java/repositories/MasterClassRepository.java
+END
+PersonRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/82/Acme-Pad-Thai/src/main/java/repositories/PersonRepository.java
+END
+PropertyRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/93/Acme-Pad-Thai/src/main/java/repositories/PropertyRepository.java
+END
+SpamTermRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/SpamTermRepository.java
+END
+NutritionistRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/NutritionistRepository.java
+END
+IngredientRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/125/Acme-Pad-Thai/src/main/java/repositories/IngredientRepository.java
+END
+StepToCookRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/StepToCookRepository.java
+END
+FolderRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/67/Acme-Pad-Thai/src/main/java/repositories/FolderRepository.java
+END
+AdministratorRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/AdministratorRepository.java
+END
+BannerRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/31/Acme-Pad-Thai/src/main/java/repositories/BannerRepository.java
+END
+SocialIdentityRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/SocialIdentityRepository.java
+END
+UserRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/20/Acme-Pad-Thai/src/main/java/repositories/UserRepository.java
+END
+BillRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/116/Acme-Pad-Thai/src/main/java/repositories/BillRepository.java
+END
+MessageRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/40/Acme-Pad-Thai/src/main/java/repositories/MessageRepository.java
+END
+EndorserRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/137/Acme-Pad-Thai/src/main/java/repositories/EndorserRepository.java
+END
+VideoRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/VideoRepository.java
+END
+CurriculumRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/CurriculumRepository.java
+END
+SponsorRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/SponsorRepository.java
+END
+PresentationRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/PresentationRepository.java
+END
+RegistrationRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/40/Acme-Pad-Thai/src/main/java/repositories/RegistrationRepository.java
+END
+ActorRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/ActorRepository.java
+END
+ContestRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/125/Acme-Pad-Thai/src/main/java/repositories/ContestRepository.java
+END
+CampaignRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/141/Acme-Pad-Thai/src/main/java/repositories/CampaignRepository.java
+END
+RecipeRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/103/Acme-Pad-Thai/src/main/java/repositories/RecipeRepository.java
+END
+TextRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/TextRepository.java
+END
+CreditCardRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/22/Acme-Pad-Thai/src/main/java/repositories/CreditCardRepository.java
+END
+CookRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/3tmxj2wqn4mfvdxkexl/!svn/ver/2/Acme-Pad-Thai/src/main/java/repositories/CookRepository.java
+END

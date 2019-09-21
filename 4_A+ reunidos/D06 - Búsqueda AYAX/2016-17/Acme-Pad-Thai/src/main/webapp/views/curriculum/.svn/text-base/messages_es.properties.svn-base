@@ -1,0 +1,24 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+curriculum.photo				= Imagen
+curriculum.educationSection		= Sección de Educación 
+curriculum.experienceSection	= Sección de Experiencia
+curriculum.hobbiesSection	    = Sección de Hobbies
+endoser.list					= Personas que recomiendan
+
+curriculum.save					= Guardar
+curriculum.create				= Crear
+curriculum.cancel				= Volver
+curriculum.edit					= Editar
+curriculum.delete				= Borrar
+curriculum.confirm.delete		= ¿Está seguro de borrar este curriculum?
+
+curriculum.endorsers			= Personas que recomiendan
+curriculum.showCurriculum		= Mostrar curriculum
+curriculum.add.endorser			= Add endorser

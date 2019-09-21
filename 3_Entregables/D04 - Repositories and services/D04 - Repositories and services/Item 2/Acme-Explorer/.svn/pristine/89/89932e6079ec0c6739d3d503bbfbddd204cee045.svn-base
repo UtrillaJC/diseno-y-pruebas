@@ -1,0 +1,134 @@
+
+package services;
+
+import java.util.Collection;
+import java.util.Date;
+
+import javax.transaction.Transactional;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.Assert;
+
+import utilities.AbstractTest;
+import domain.Explorer;
+import domain.Finder;
+import domain.Money;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {
+	"classpath:spring/datasource.xml", "classpath:spring/config/packages.xml"
+})
+@Transactional
+public class FinderServiceTest extends AbstractTest {
+
+	// Service under test ---------------------------------
+
+	@Autowired
+	private FinderService	finderService;
+
+	@Autowired
+	private ExplorerService	explorerService;
+
+
+	// Tests ----------------------------------------------
+
+	@Test
+	public void testCreate() {
+
+		super.authenticate("explorer1");									// Simulamos que estamos autenticados en el sistema
+
+		Finder finder = null;
+		Explorer explorer = null;
+
+		explorer = this.explorerService.findByPrincipal();					// Obtenemos el explorer autenticado de la base de datos
+		finder = this.finderService.create(explorer);						// Creamos finder utilizando el servicio
+
+		// Comprobamos que los atributos...
+
+		Assert.isNull(finder.getKeyword());									// keyword: String [0..1]
+		Assert.isNull(finder.getPriceMin());								// priceMin: Money [0..1] 
+		Assert.isNull(finder.getPriceMax());								// priceMax: Money [0..1]
+		Assert.isNull(finder.getStartDateTripMin());						// startDateTripMix: Money [0..1]
+		Assert.isNull(finder.getStartDateTripMax());						// startDateTripMax: Money [0..1]
+		Assert.notNull(finder.getLastUpdate());								// lastUpdate: Date {Past)
+
+		// Comprobamos que sus relaciones...
+
+		Assert.notNull(finder.getExplorer());
+
+		super.unauthenticate();												// Eliminamos la simulación de la autenticación
+
+	}
+
+	@Test
+	public void testSave() {
+
+		super.authenticate("explorer1");									// Simulamos que estamos autenticados en el sistema
+
+		Finder finder = null;
+		Finder saved = null;
+		Collection<Finder> finders = null;
+
+		final Explorer explorer = this.explorerService.findByPrincipal();	// Obtenemos el ranger autenticado de la base de datos
+		Assert.notNull(explorer);											// Comprobamos que devuelve un explorer
+
+		finder = this.finderService.create(explorer);
+
+		// Modificamos los atributos del finder
+
+		finder.setKeyword("keyword modified");
+		finder.setPriceMin(new Money());
+		finder.setPriceMax(new Money());
+		finder.setStartDateTripMax(new Date(System.currentTimeMillis() - 60000));
+		finder.setStartDateTripMin(new Date(System.currentTimeMillis() - 30000));
+		finder.setLastUpdate(new Date(System.currentTimeMillis() - 12000));
+		finder.setExplorer(explorer);
+
+		saved = this.finderService.save(finder);							// Persistimos el finder en la base de datos
+		finders = this.finderService.findAll();								// Obtenemos todos los finders de la base de datos
+
+		Assert.isTrue(finders.contains(saved));								// Comprobamos que está en la base de datos
+
+		super.unauthenticate();												// Eliminamos la simulación de la autenticación
+
+	}
+
+	@Test
+	public void testDelete() {
+
+		super.authenticate("explorer1");									// Simulamos que estamos autenticados en el sistema
+
+		Finder finder = null;
+		Finder saved = null;
+		Collection<Finder> finders = null;
+
+		final Explorer explorer = this.explorerService.findByPrincipal();	// Obtenemos el explorer autenticado de la base de datos
+
+		finder.setKeyword("keyword modified");
+		finder.setPriceMin(new Money());
+		finder.setPriceMax(new Money());
+		finder.setStartDateTripMax(new Date(System.currentTimeMillis() - 60000));
+		finder.setStartDateTripMin(new Date(System.currentTimeMillis() - 30000));
+		finder.setLastUpdate(new Date(System.currentTimeMillis() - 12000));
+		finder.setExplorer(explorer);
+
+		finder = this.finderService.create(explorer);
+
+		// Modificamos los atributos del finder
+
+		finder.setLastUpdate(new Date(System.currentTimeMillis() - 28000));
+
+		saved = this.finderService.save(finder);							// Persistimos el finder en la base de datos...
+		this.finderService.delete(saved);									// ...y lo borramos de ella
+		finders = this.finderService.findAll();								// Obtenemos todos los finders de la base de datos
+
+		Assert.isTrue(!finders.contains(saved));							// Comprobamos que se ha eliminado y no persiste en la base de datos
+
+		super.unauthenticate();												// Eliminamos la simulación de la autenticación
+
+	}
+}

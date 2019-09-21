@@ -1,0 +1,2 @@
+﻿CPU: Intel(R) Core(TM) i7-4650U 1,7 GHz Dual Core
+Hard Drive: SSD 

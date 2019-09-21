@@ -1,0 +1,17 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+creditCard.number 			= Number
+creditCard.holderName 		= Holder name
+creditCard.brandName		= Brand name
+creditCard.expirationMonth	= Expiration month
+creditCard.expirationYear	= Expiration year
+creditCard.cvv				= CVV
+creditCard.edit				= Edit
+creditCard.cancel			= Cancel
+creditCard.save				= Save

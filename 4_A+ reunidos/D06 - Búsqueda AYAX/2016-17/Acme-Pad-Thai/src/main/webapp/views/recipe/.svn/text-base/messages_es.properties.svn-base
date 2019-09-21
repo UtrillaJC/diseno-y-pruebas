@@ -1,0 +1,57 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+recipe.authored			= Autor
+recipe.title			= Título
+recipe.momentAuthored	= Creada
+recipe.momentUpdated	= Actualizada
+recipe.likes			= Me gusta
+recipe.dislikes			= No me gusta
+recipe.summary			= Resumen
+recipe.pictures 		= Imágenes
+recipe.hints 			= Sugerencias
+recipe.categories		= Categorías
+recipe.stepToCook		= Pasos de cocina
+recipe.ingredient		= Ingredientes
+recipe.quantity			= Cantidad
+
+recipe.search			= Buscar
+recipe.searchText		= Introduce el identificador único, título o alguna palabra del resumen de una receta.
+recipe.register			= Registrar
+
+recipe.showRecipe		= Mostrar Receta
+
+recipe.edit				= Editar
+recipe.delete			= Borrar
+recipe.create			= Crear
+recipe.save				= Guardar
+recipe.cancel			= Cancelar
+
+recipe.back				= Volver
+recipe.add.category		= Añadir categoría
+recipe.add.ingredient	= Añadir ingrediente
+recipe.add.stepToCook	= Añadir paso para cocinar
+
+recipe.commit.error		= No se puede completar su operación. Puede que su receta esté registrada en un concurso.
+recipe.commit.ok		= Operación completada con éxito
+
+recipe.confirm.delete	= ¿Estas seguro de que deseas borrar la receta?
+
+recipe.comments			= Comentarios
+recipe.writeComment		= Escribir un comentario
+comment.title			= Título
+comment.text			= Texto
+comment.stars			= Estrellas	
+
+recipe.banners			= Anuncios
+
+banner.description		= Descripción banner
+
+recipe.ilikes			= Recetas que me gustan
+recipe.idontlikes		= Recetas que no me gustan
+recipe.not.tastes		= Recetas sin likes y dislikes

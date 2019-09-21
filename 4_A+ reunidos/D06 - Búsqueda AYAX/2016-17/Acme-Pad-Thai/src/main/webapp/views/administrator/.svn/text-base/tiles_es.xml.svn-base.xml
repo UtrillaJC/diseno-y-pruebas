@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2016 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+
+	<definition name="administrator/dashboardRecipe" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Recetas" />
+		<put-attribute name="body" value="/views/administrator/dashboardRecipe.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboardUser" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Usuarios" />
+		<put-attribute name="body" value="/views/administrator/dashboardUser.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboardBill" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Facturas" />
+		<put-attribute name="body" value="/views/administrator/dashboardBill.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboardContest" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Concursos" />
+		<put-attribute name="body" value="/views/administrator/dashboardContest.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboardMasterClass" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Clases Maestras" />
+		<put-attribute name="body" value="/views/administrator/dashboardMasterClass.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboardSponsor" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Patrocinadores" />
+		<put-attribute name="body" value="/views/administrator/dashboardSponsor.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboardStepToCook" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Pasos para Cocinar" />
+		<put-attribute name="body" value="/views/administrator/dashboardStepToCook.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboardIngredient" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Ingredientes" />
+		<put-attribute name="body" value="/views/administrator/dashboardIngredient.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboardLearningMaterial" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Materiales de aprendizaje" />
+		<put-attribute name="body" value="/views/administrator/dashboardLearningMaterial.jsp" />
+	</definition>
+	
+	<definition name="administrator/dashboardCampaign" extends="master.page">	
+		<put-attribute name="title" value="Panel de Control Campañas" />
+		<put-attribute name="body" value="/views/administrator/dashboardCampaign.jsp" />
+	</definition>
+	
+	<definition name="administrator/editProfile" extends="master.page">
+  		<put-attribute name="title" value="Editar perfil" /> 
+  		<put-attribute name="body" value="/views/administrator/editProfile.jsp" /> 
+  	</definition>
+
+	<definition name="administrator/editSocialIdentity" extends="master.page">
+  		<put-attribute name="title" value="Crear identidad social" /> 
+  		<put-attribute name="body" value="/views/administrator/editSocialIdentity.jsp" /> 
+  	</definition>
+	
+</tiles-definitions>

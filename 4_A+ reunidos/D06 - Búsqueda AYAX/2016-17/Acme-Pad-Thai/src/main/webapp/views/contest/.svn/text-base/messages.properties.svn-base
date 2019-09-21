@@ -1,0 +1,22 @@
+contest.title				= Title
+contest.momentOpening 		= Moment Opening
+contest.momentClosing		= Moment Closing
+
+contest.save 			    = Save
+contest.cancel 		 	    = Cancel
+contest.edit				= Edit
+contest.delete				= Delete
+contest.create				= Create contest
+contest.back			    = Back
+contest.execute				= Run process
+
+
+contest.recipesWinners		= Recipes winners
+contest.recipesQualifies	= Recipes qualifies
+contest.registerRecipe		= Register recipe
+
+contest.confirm.delete		= Are you sure you want to delete this contest?
+
+contest.commit.error		= Can't complete your action
+contest.commit.ok			= Action sucessfully completed
+contest.finished			= Finished contests

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/154/Acme-CarNGo/src/main/resources
+END
+application.properties
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/resources/application.properties
+END
+displaytag_en.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/resources/displaytag_en.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/resources/log4j.properties
+END
+displaytag.properties
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/resources/displaytag.properties
+END
+displaytag_es.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/2/Acme-CarNGo/src/main/resources/displaytag_es.properties
+END
+PopulateDatabase.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/nwecndtyc3l2w2v7cpv/!svn/ver/132/Acme-CarNGo/src/main/resources/PopulateDatabase.xml
+END

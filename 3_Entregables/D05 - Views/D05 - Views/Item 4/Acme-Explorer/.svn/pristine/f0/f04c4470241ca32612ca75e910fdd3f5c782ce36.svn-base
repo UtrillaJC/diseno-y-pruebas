@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+auditRecord.trip    				= Trip
+auditRecord.moment    				= Moment
+auditRecord.title    				= Title	
+auditRecord.description    			= Description
+auditRecord.attachment    			= Attachments
+auditRecord.finalVersion    		= Final verion
+note.save    						= Save
+note.cancel    						= Cancel

@@ -1,0 +1,33 @@
+# messages.properties
+#
+# Copyright (C) 2016 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+user.name						= Nombre
+user.surname					= Apellidos
+user.email						= Email
+user.phoneNumber				= Número de teléfono
+user.address					= Dirección
+
+socialIdentity.link				= Enlace
+socialIdentity.name				= Nombre
+socialIdentity.nick				= Nick
+socialIdentity.picture			= Imagen
+
+user.showUser					= Perfil de usuario
+user.listRecipes				= Recetas
+
+user.search						= Buscar
+user.searchText					= Introduce el nombre de un usuario.
+user.back						= Volver
+
+user.save						= Guardar	
+user.cancel						= Cancelar
+socialIdentity.create			= Crear Identidad Social
+
+user.commit.error				= La acción no se puede completar
+user.informationData			= Datos personales
+user.socialIdentity				= Datos  de la idendtidad social
